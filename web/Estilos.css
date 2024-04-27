@@ -1,17 +1,29 @@
 *{
 	box-sizing: border-box;
 }
-body{
-	background-color: #FFC0CB  ;
+
+#body1{
+	background-color: #736a70  ;
 	font-family: Times;
 	margin: 2cm;
 }
 header{
-	background-color: #F5F5F5  ;
-	padding: 30px;
-	font-size: 35px;
-	text-align: center;
+	background-color: #eef5d3   ;
+	padding: 20px;
+	font-size: 25px;
 	color: #333333;
+}
+section{background-color: #f5d3d8   ;
+	padding: 20px;
+	font-size: 25px;
+	color: #333333;
+}
+footer{
+	padding: 20px;
+	font-size: 25px;
+	background-color: #d3f5da ;
+	color: #333333;
+
 }
 nav{
 	float: left;
@@ -39,20 +51,7 @@ aside{
 	padding: 20px;
 	height: 300px;
 }
-section{background-color: #F5F5F5  ;
-	padding: 30px;
-	font-size: 35px;
-	text-align: center;
-	color: #333333;
-}
-footer{
-	padding: 30px;
-	font-size: 35px;
-	background-color: #F0F0F0;
-	text-align: center;
-	color: #333333;
 
-}
 @media(max-width: 600px){
 	nav, section, aside, footer{
 		width: 100%;
@@ -66,4 +65,24 @@ img{
 }
 form{
 
+}
+#lista{
+	background: #00CED1 ;
+	float: right;
+	font-family:cursive;
+	font-size: 20px;
+}
+a:hover {
+            color:#FF0000; 
+        }
+#titulo{
+	background: #ff8000 ;
+	font-family:monospace;
+	font-size: 20px;
+}
+#copy{
+	background: #191970;
+	font-family:monospace;
+	font-size: 15px;
+	color:white;
 }
