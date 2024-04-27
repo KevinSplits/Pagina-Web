@@ -86,3 +86,8 @@ a:hover {
 	font-size: 15px;
 	color:white;
 }
+#video{
+	background-image:url(imagen/fondo.png);
+	color:white;
+	font-size:20px;
+}
