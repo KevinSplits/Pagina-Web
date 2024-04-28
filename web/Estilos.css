@@ -1,14 +1,13 @@
 *{
 	box-sizing: border-box;
 }
-<<<<<<< HEAD
+
 body{
 	background-color: #0000;
-=======
+}
 
 #body1{
-	background-color: #736a70  ;
->>>>>>> b610dc528509b535c961b35709cc9e9a5d3f07eb
+	background-image:url(imagen/fondo3.jpg);
 	font-family: Times;
 	margin: 2cm;
 }
@@ -63,8 +62,7 @@ aside{
 		height: auto;
 	}
 }
-<<<<<<< HEAD
-/*Formulario*/
+
 .formulario{
 	background: url(imagen/form.png);
 	background-repeat: no repeat;
@@ -151,3 +149,14 @@ a:hover {
         background-color: #f2f2f2;
     }
 
+#bodytabla{
+	background-color: #eef5d3;
+	padding: 20px;
+	font-size: 25px;
+	color: #333333;
+
+}
+#fondotabla{
+	background-image:url(imagen/fondo2.jpeg);
+	color:white;
+}
