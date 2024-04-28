@@ -1,12 +1,22 @@
 *{
 	box-sizing: border-box;
 }
+<<<<<<< HEAD
 body{
 	background-color: #0000;
 =======
 }
 #body1{
 	background-color: #736a70  ;
+=======
+
+body{
+	background-color: #0000;
+}
+
+#body1{
+	background-image:url(imagen/fondo3.jpg);
+>>>>>>> 4c3a29e27d80819c06f5ce1f985e382a022661fd
 	font-family: Times;
 	margin: 2cm;
 }
@@ -61,7 +71,11 @@ aside{
 		height: auto;
 	}
 }
+<<<<<<< HEAD
 /*Formulario*/
+=======
+
+>>>>>>> 4c3a29e27d80819c06f5ce1f985e382a022661fd
 .formulario{
 	background: url(imagen/form1.png);
 	background-repeat: no repeat;
@@ -145,7 +159,25 @@ th, td {
     text-align: left;
 }
     
+<<<<<<< HEAD
 th {
    background-color: #f2f2f2;
 }
 
+=======
+    th {
+        background-color: #f2f2f2;
+    }
+
+#bodytabla{
+	background-color: #eef5d3;
+	padding: 20px;
+	font-size: 25px;
+	color: #333333;
+
+}
+#fondotabla{
+	background-image:url(imagen/fondo2.jpeg);
+	color:white;
+}
+>>>>>>> 4c3a29e27d80819c06f5ce1f985e382a022661fd
