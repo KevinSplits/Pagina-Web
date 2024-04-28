@@ -1,11 +1,15 @@
 *{
 	box-sizing: border-box;
 }
+body{
+	background-color: #0000;
+}
 
 #body1{
 	background-image:url(imagen/fondo3.jpg);
 	font-family: Times;
 	margin: 2cm;
+	background-color: #736a70
 }
 header{
 	background-color: #eef5d3   ;
@@ -58,11 +62,12 @@ aside{
 		height: auto;
 	}
 }
-
+.BordeBodyForm{
+	background-image: url(imagen/form1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .formulario{
-	background: url(imagen/form1.png);
-	background-repeat: no repeat;
-	background-size: cover;
 	padding: 30px;
 }
 input [type="text"]{
@@ -79,7 +84,7 @@ legend{
 	border: 2px solid black;
 	color: white;
 	text-align: center;
-	background-color: #1A213F;
+	background-color: #34394F;
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
@@ -88,7 +93,7 @@ label{
 }
 fieldset{
 	border-color: #000;
-	background-color: #1A213F;
+	background-color: #34394F;
 	padding: 15px;
 	margin: 0 auto;
 	max-width: 500px;
@@ -109,8 +114,8 @@ img{
 	font-size: 20px;
 }
 a:hover {
-            color:#FF0000; 
-        }
+    color:#FF0000; 
+}
 #titulo{
 	background: #ff8000 ;
 	font-family:monospace;
@@ -139,7 +144,9 @@ th, td {
     padding: 10px;
     text-align: left;
 }
-    
+th {
+   background-color: #f2f2f2;
+}
 th {
    background-color: #f2f2f2;
 }
@@ -155,7 +162,7 @@ th {
 	background-image:url(imagen/fondo2.jpeg);
 	color:white;
 }
-
 ul{
 	list-style:none;
 }
+
