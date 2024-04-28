@@ -160,3 +160,6 @@ a:hover {
 	background-image:url(imagen/fondo2.jpeg);
 	color:white;
 }
+ul{
+	list-style:none;
+}
