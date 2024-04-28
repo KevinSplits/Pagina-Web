@@ -108,7 +108,7 @@ img{
 }
 
 #lista{
-	background: #00CED1 ;
+	background-image:url(imagen/fondolista.jpg);
 	float: right;
 	font-family:cursive;
 	font-size: 20px;
@@ -117,12 +117,14 @@ a:hover {
     color:#FF0000; 
 }
 #titulo{
-	background: #ff8000 ;
+	background-image:url(imagen/fondotitulo.jpg);
+	background-repeat: no repeat;
+	background-size: cover;
 	font-family:monospace;
 	font-size: 20px;
 }
 #copy{
-	background: #191970;
+	background-image:url(imagen/fondocontacto.jpg);
 	font-family:monospace;
 	font-size: 15px;
 	color:white;
