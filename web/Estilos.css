@@ -2,10 +2,6 @@
 	box-sizing: border-box;
 }
 
-body{
-	background-color: #0000;
-}
-
 #body1{
 	background-image:url(imagen/fondo3.jpg);
 	font-family: Times;
@@ -62,9 +58,12 @@ aside{
 		height: auto;
 	}
 }
+<<<<<<< HEAD
+/*Formulario*/
+=======
 
 .formulario{
-	background: url(imagen/form.png);
+	background: url(imagen/form1.png);
 	background-repeat: no repeat;
 	background-size: cover;
 	padding: 30px;
@@ -75,14 +74,15 @@ input [type="text"]{
 	padding: 100px;
 	width: 100%;
 }
-.Preferencias{
-    color: white;
+
+input[type="checkbox"] {
+    color: white; 
 }
 legend{
 	border: 2px solid black;
 	color: white;
 	text-align: center;
-	background-color: #1A1B30;
+	background-color: #1A213F;
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
@@ -91,15 +91,15 @@ label{
 }
 fieldset{
 	border-color: #000;
-	background-color: #1A1B30;
+	background-color: #1A213F;
 	padding: 15px;
 	margin: 0 auto;
 	max-width: 500px;
 	text-align: left;
 	width: 41%;
 	height: 50%;
+	color: white;
 }
-=======
 img{
 	width: 15%;
 	height: 15%;
@@ -133,21 +133,21 @@ a:hover {
 	font-size:20px;
 }
 
-  table {
-        border-collapse: collapse;
-        width: 100%;
-        max-width: 600px;
-        margin: 0 auto;
-    }
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
     
-    th, td {
-        padding: 10px;
-        text-align: left;
-    }
+th, td {
+    padding: 10px;
+    text-align: left;
+}
     
-    th {
-        background-color: #f2f2f2;
-    }
+th {
+   background-color: #f2f2f2;
+}
 
 #bodytabla{
 	background-color: #eef5d3;
@@ -160,6 +160,7 @@ a:hover {
 	background-image:url(imagen/fondo2.jpeg);
 	color:white;
 }
+
 ul{
 	list-style:none;
 }
