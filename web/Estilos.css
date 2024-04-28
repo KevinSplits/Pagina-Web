@@ -6,7 +6,7 @@ body{
 }
 
 #body1{
-	background-image:url(imagen/fondo3.jpg);
+	background-image:url(imagen/Contactos.png);
 	font-family: Times;
 	margin: 2cm;
 	background-color: #736a70
@@ -108,7 +108,7 @@ img{
 }
 
 #lista{
-	background-image:url(imagen/fondolista.jpg);
+	background-image:url(imagen/FondoVerdeAzulado.jpg);
 	float: right;
 	font-family:cursive;
 	font-size: 20px;
@@ -117,14 +117,14 @@ a:hover {
     color:#FF0000; 
 }
 #titulo{
-	background-image:url(imagen/fondotitulo.jpg);
+	background-image:url(imagen/enc1.png);
 	background-repeat: no repeat;
 	background-size: cover;
 	font-family:monospace;
 	font-size: 20px;
 }
 #copy{
-	background-image:url(imagen/fondocontacto.jpg);
+	background-image:url(imagen/fondoazuloscuro.png);
 	background-repeat: no repeat;
 	background-size: cover;
 	font-family:monospace;
