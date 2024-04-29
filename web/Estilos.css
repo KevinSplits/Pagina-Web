@@ -108,8 +108,8 @@ img{
 }
 
 #lista{
-	background-image:url(imagen/FondoVerdeAzulado.jpg);
-	float: right;
+	background-image:url(imagen/Lista.jpg);
+	float: center;
 	font-family:cursive;
 	font-size: 20px;
 }
@@ -164,5 +164,29 @@ th {
 }
 ul{
 	list-style:none;
+	float: left;
+}
+.boton1{
+	background-color: #393982;
 }
 
+.vinculo{
+	color: #A6CBCA;
+}
+
+.viñetas1{
+	list-style: square;
+}
+.viñetas2{
+	list-style: circle;
+}
+table.datos{
+	width: 100%;
+    border-collapse: collapse;
+}
+td.columna1{
+	width: 40%;
+}
+td.columna2, td.columna3{
+	width: 30%;
+}
