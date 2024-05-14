@@ -11,10 +11,31 @@ body{
 	margin: 2cm;
 	background-color: #736a70
 }
+#body2{
+	font-family: Times;
+	margin: 2cm;
+}
+#f1 {
+	padding:20px;
+	text-align:left;
+	border: 5px solid black;
+}
+#f1 input{
+	padding: 20px;
+	font-size: 35px;
+	color: black;
+	font-family:fantasy	;
+}
+#f1 label{
+	padding: 20px;
+	font-size: 35px;
+	color: black;
+	font-family:fantasy	;
+}	
 header{
 	background-color: #eef5d3   ;
 	padding: 20px;
-	font-size: 25px;
+	font-size: 25px
 	color: #333333;
 }
 section{background-color: #f5d3d8   ;
