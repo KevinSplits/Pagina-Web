@@ -5,14 +5,24 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="Estilos.css">
+	<script src="Codigos.js"></script>
 </head>
 <body>
 <form name="Binario_Octal" id="f1">
 	<label>Ejercicio: Bases menores de 10 a decimales</label>
 	<br>
+	<br>
+	<label>Ingrese el tipo de base que quiere convertir a decimal (Menores a base 10): </label>
+	<br>
+	<br>
+	<input type="number" name="input1" min="1" max="9" required value="1">
+	<br>
+	<br>
+	<label>Ingrese el número correspondiente:</label>
+	<br>
 	<br>		
-	<input type="text" name="input">
-	<input type="button" name="convertir" value="Convertir">
+	<input type="text" name="input2">
+	<input type="button" name="convertir" value="Convertir" onclick="convertirBaseADecimal()">
 	<br>
 	<br>	
 	<label>Respuesta:</label>
@@ -24,11 +34,17 @@
 	<br>
 	<br>		
 	<input type="text" name="input">
-	<input type="button" name="convertir" value="Convertir">
+	<input type="button" name="convertir" value="Convertir" onclick="construirTriangulo()">
+	<br>
+	<br>
+	<label>Cambie el tamaño del triángulo ---></label>
+	<input type="number" name="input1" min="1" max="999999" required value="1">
 	<br>
 	<br>	
 	<label>Respuesta:</label>
-	<input type="text" name="output">
+	<br>
+	<br>
+	<textarea name="output" rows="10" cols="30" readonly></textarea>
 </form>
 
 </body>
