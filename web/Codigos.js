@@ -35,8 +35,8 @@ function convertirBaseADecimal() {
 }
 
 function construirTriangulo() {
-    let caracter = document.forms["TrianguloConstructor"]["input"].value;
-    let tamano = parseInt(document.forms["TrianguloConstructor"]["input1"].value);
+    let caracter = document.TrianguloConstructor.input.value;
+    let tamano = parseInt(document.TrianguloConstructor.input1.value);
 
     // Verificar que se haya ingresado un carácter y un tamaño válido
     if (caracter.length !== 1) {
@@ -50,13 +50,20 @@ function construirTriangulo() {
     }
 
     let triangulo = "";
-    for (let i = 1; i <= tamano; i++) {
-        // Construir cada línea del triángulo
-        triangulo += caracter.repeat(i) + "\n";
+    let longitudFila = tamano * 2 - 1;
+
+    for (let i = tamano; i > 0; i--) {
+        let espaciosAntes = "&nbsp;".repeat(tamano - i);
+        let espaciosDespues = "&nbsp;".repeat(tamano - i);
+        let fila = espaciosAntes + caracter.repeat(i * 2 - 1) + espaciosDespues;
+        triangulo += fila + "<br>";
     }
 
-    // Mostrar el resultado en el campo de texto "Respuesta"
-    document.forms["TrianguloConstructor"]["output"].value = triangulo;
+    // Mostrar el resultado en el div con el id "contenido"
+    document.getElementById('contenido').innerHTML = triangulo;
 }
+
+
+
 
 

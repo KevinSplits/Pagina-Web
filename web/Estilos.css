@@ -26,6 +26,11 @@ body{
 	color: black;
 	font-family:fantasy	;
 }
+#f1 div{
+	text-align:center;
+	font-size:20px;
+	font-family:fantasy	;
+}
 #f1 label{
 	padding: 20px;
 	font-size: 35px;
