@@ -63,7 +63,13 @@ function construirTriangulo() {
     document.getElementById('contenido').innerHTML = triangulo;
 }
 
+function datosOn() {
+    document.getElementById('d1').src = 'imagen/Datos1.png';
+}
 
+function datosOff() {
+    document.getElementById('d1').src = 'imagen/Datos.png';
+}
 
 
 
