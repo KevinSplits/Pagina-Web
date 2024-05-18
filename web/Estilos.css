@@ -36,7 +36,8 @@ body{
 	font-size: 35px;
 	color: black;
 	font-family:fantasy	;
-}	
+}
+
 header{
 	background-color: #eef5d3   ;
 	padding: 20px;
@@ -215,4 +216,22 @@ td.columna1{
 }
 td.columna2, td.columna3{
 	width: 30%;
+}
+.container {
+    position: relative;
+    width: 280px; /* ajusta según el tamaño de tu imagen */
+}
+
+.container img{
+	width: 280px;
+	height: 157px;
+}
+.descripcion {
+    position: absolute;
+    bottom: 10px; /* ajusta según tu diseño */
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    display: none;
 }

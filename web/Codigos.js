@@ -64,12 +64,39 @@ function construirTriangulo() {
 }
 
 function datosOn() {
-    document.getElementById('d1').src = 'imagen/Datos1.png';
+    document.getElementById('d1').style.opacity = 0.8;
 }
 
 function datosOff() {
-    document.getElementById('d1').src = 'imagen/Datos.png';
+    document.getElementById('d1').style.opacity = 1;
+}
+
+function cambiarTamaño() {
+    var tamano=prompt('Inserte el tamaño que quieres poner')
+    if (tamano<1) {
+        alert('Ingrese un número valido')
+    }else{
+        if (tamano>101) {
+            alert('Recomendamos no pasarse del límite')
+
+        }
+            else{
+        document.getElementById('tamaño').style.fontSize=tamano+'px';
+    }}
+    }
+
+
+function reestablecerTamaño() {
+    document.getElementById('tamaño').style.fontSize='16px';
 }
 
 
+function ponerDescripcion() {
+    const descripcion = document.getElementById('descripcion');
+    descripcion.style.display = 'block';
+}
 
+function quitarDescripcion() {
+    const descripcion = document.getElementById('descripcion');
+    descripcion.style.display = 'none';
+}
