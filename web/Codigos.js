@@ -231,8 +231,8 @@ function mostrarSigno(){
         descripcion = 'Descripción de Piscis';
         imagen = 'imagenes/piscis.jpg';
     }
-    const resultado = document.getElementById('result1');
-    resultado.innerHTML = `<div class="resultado-signo">
+    const mostrarSig = document.getElementById('result1');
+    mostrarSig.innerHTML = `<div class="resultado-signo">
                                 <img src="${imagen}" alt="${signo}" class="imagen-signo">
                                 <div class="descrip-contain-signo">
                                     <div class="nombre-signo">${signo}</div>
