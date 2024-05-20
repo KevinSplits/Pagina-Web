@@ -101,74 +101,7 @@ function quitarDescripcion() {
     descripcion.style.display = 'none';
 }
 
-// function mostrarSigno() {
-//     const fechaNacimiento = document.getElementById('fecha').value;
-//     const resultado = document.getElementById('result1');
-
-//     if (!fechaNacimiento) {
-//         resultado.innerHTML = 'Por favor, ingrese una fecha de nacimiento.';
-//         return;
-//     }
-
-//     const partes = fechaNacimiento.split("-");
-//     const mes = parseInt(partes[1], 10);
-//     const dia = parseInt(partes[2], 10);
-
-//     let signo = '';
-//     let descripcion = '';
-//     let imagen = '';
-
-//     if ((mes === 1 && dia >= 20) || (mes === 2 && dia <= 18)) {
-//         signo = 'Acuario';
-//         descripcion = 'Descripción de Acuario';
-//         imagen = 'imagenes/acuario.jpg';
-//     } else if ((mes === 2 && dia >= 19) || (mes === 3 && dia <= 20)) {
-//         signo = 'Piscis';
-//         descripcion = 'Descripción de Piscis';
-//         imagen = 'imagenes/piscis.jpg';
-//     } else if ((mes === 3 && dia >= 21) || (mes === 4 && dia <= 19)) {
-//         signo = 'Aries';
-//         descripcion = 'Descripción de Aries';
-//         imagen = 'imagenes/aries.jpg';
-//     } else if ((mes === 4 && dia >= 20) || (mes === 5 && dia <= 20)) {
-//         signo = 'Tauro';
-//         descripcion = 'Descripción de Tauro';
-//         imagen = 'imagenes/tauro.jpg';
-//     } else if ((mes === 5 && dia >= 21) || (mes === 6 && dia <= 20)) {
-//         signo = 'Géminis';
-//         descripcion = 'Descripción de Géminis';
-//         imagen = 'imagenes/geminis.jpg';
-//     } else if ((mes === 6 && dia >= 21) || (mes === 7 && dia <= 22)) {
-//         signo = 'Cáncer';
-//         descripcion = 'Descripción de Cáncer';
-//         imagen = 'imagenes/cancer.jpg';
-//     } else if ((mes === 7 && dia >= 23) || (mes === 8 && dia <= 22)) {
-//         signo = 'Leo';
-//         descripcion = 'Descripción de Leo';
-//         imagen = 'imagenes/leo.jpg';
-//     } else if ((mes === 8 && dia >= 23) || (mes === 9 && dia <= 22)) {
-//         signo = 'Virgo';
-//         descripcion = 'Descripción de Virgo';
-//         imagen = 'imagenes/virgo.jpg';
-//     } else if ((mes === 9 && dia >= 23) || (mes === 10 && dia <= 22)) {
-//         signo = 'Libra';
-//         descripcion = 'Descripción de Libra';
-//         imagen = 'imagenes/libra.jpg';
-//     } else if ((mes === 10 && dia >= 23) || (mes === 11 && dia <= 21)) {
-//         signo = 'Escorpio';
-//         descripcion = 'Descripción de Escorpio';
-//         imagen = 'imagenes/escorpio.jpg';
-//     } else if ((mes === 11 && dia >= 22) || (mes === 12 && dia <= 21)) {
-//         signo = 'Sagitario';
-//         descripcion = 'Descripción de Sagitario';
-//         imagen = 'imagenes/sagitario.jpg';
-//     } else if ((mes === 12 && dia >= 22) || (mes === 1 && dia <= 19)) {
-//         signo = 'Capricornio';
-//         descripcion = 'Descripción de Capricornio';
-//         imagen = 'imagenes/capricornio.jpg';
-//     }
-//     resultado.innerHTML = `<div class="signo">${signo}</div><div class="descripcion">${descripcion}</div><img src="${imagen}" alt="${signo}" class="imagen-signo">`;
-// }
+/*Ejercicio 4*/
 
 function mostrarSigno(){
     let dia, mes;
@@ -176,67 +109,72 @@ function mostrarSigno(){
     mes = parseInt (document.formsig.mes.value);
 
     let signo = '';
-    let descripcion = '';
-    let imagen = '';
+    let descSigno = '';
+    let imgSigno = '';
+
+    if ((dia === '' || isNaN(dia)) || (mes === '' || isNaN(mes))) {
+        document.getElementById('validar-signo').innerText = "Por favor, ingrese valores numéricos para el día y el mes";
+        return;
+    }    
 
     if((dia>=21&&mes==3)||(dia<=20&&mes==4)){
         signo = 'Aries';
-        descripcion = 'Descripción de Aries';
-        imagen = 'imagenes/aries.jpg';
+        descSigno = 'Descripción de Aries';
+        imgSigno = 'imagenes/aries.jpg';
     }else if((dia>=24&&mes==9)||(dia<=23&&mes==10)){
         signo = 'Libra';
-        descripcion = 'Descripción de Libra';
-        imagen = 'imagenes/libra.jpg';
+        descSigno = 'Descripción de Libra';
+        imgSigno = 'imagenes/libra.jpg';
     }else if((dia>=21&&mes==4)||(dia<=21&&mes==5)){
         signo = 'Tauro';
-        descripcion = 'Descripción de Tauro';
-        imagen = 'imagenes/tauro.jpg';
+        descSigno = 'Descripción de Tauro';
+        imgSigno = 'imagenes/tauro.jpg';
     }else if((dia>=24&&mes==10)||(dia<=22&&mes==11)){
         signo = 'Escorpio';
-        descripcion = 'Descripción de Escorpio';
-        imagen = 'imagenes/escorpio.jpg';
+        descSigno = 'Descripción de Escorpio';
+        imgSigno = 'imagenes/escorpio.jpg';
     }else if((dia>=22&&mes==5)||(dia<=21&&mes==6)){
         signo = 'Géminis';
-        descripcion = 'Géminis es un signo mutable que forma parte del elemento aire; ' +
+        descSigno = 'Géminis es un signo mutable que forma parte del elemento aire; ' +
                   'como signo de los gemelos, su carácter es doble y bastante contradictorio por complejo. ' +
                   'Por una parte es capaz de adaptarse con facilidad y rapidez a todo, pero por otra puede resultar hipócrita. ' +
                   'Su distintivo común es la comunicación y el ingenio.';
-        imagen = 'imagen/Geminis.png';
+        imgSigno = 'imagen/Geminis.png';
     }else if((dia>=23&&mes==11)||(dia<=21&&mes==12)){
         signo = 'Sagitario';
-        descripcion = 'Descripción de Sagitario';
-        imagen = 'imagenes/sagitario.jpg';
+        descSigno = 'Descripción de Sagitario';
+        imgSigno = 'imagenes/sagitario.jpg';
     }else if((dia>=21&&mes==6)||(dia<=23&&mes==7)){
         signo = 'Cáncer';
-        descripcion = 'Descripción de Cáncer';
-        imagen = 'imagen/cancer.jpg';
+        descSigno = 'Descripción de Cáncer';
+        imgSigno = 'imagen/cancer.jpg';
     }else if((dia>=22&&mes==12)||(dia<=20&&mes==1)){
         signo = 'Capricornio';
-        descripcion = 'Descripción de Capricornio';
-        imagen = 'imagenes/capricornio.jpg';
+        descSigno = 'Descripción de Capricornio';
+        imgSigno = 'imagenes/capricornio.jpg';
     }else if((dia>=24&&mes==7)||(dia<=23&&mes==8)){
         signo = 'Leo';
-        descripcion = 'Descripción de Leo';
-        imagen = 'imagenes/leo.jpg';
+        descSigno = 'Descripción de Leo';
+        imgSigno = 'imagenes/leo.jpg';
     }else if((dia>=21&&mes==1)||(dia<=19&&mes==2)){
         signo = 'Acuario';
-        descripcion = 'Descripción de Acuario';
-        imagen = 'imagenes/acuario.jpg';
+        descSigno = 'Descripción de Acuario';
+        imgSigno = 'imagenes/acuario.jpg';
     }else if((dia>=24&&mes==8)||(dia<=23&&mes==9)){
         signo = 'Virgo';
-        descripcion = 'Descripción de Virgo';
-        imagen = 'imagenes/virgo.jpg';
+        descSigno = 'Descripción de Virgo';
+        imgSigno = 'imagenes/virgo.jpg';
     }else if((dia>=20&&mes==2)||(dia<=20&&mes==3)){
         signo = 'Piscis';
-        descripcion = 'Descripción de Piscis';
-        imagen = 'imagenes/piscis.jpg';
+        descSigno = 'Descripción de Piscis';
+        imgSigno = 'imagenes/piscis.jpg';
     }
     const mostrarSig = document.getElementById('result1');
     mostrarSig.innerHTML = `<div class="resultado-signo">
-                                <img src="${imagen}" alt="${signo}" class="imagen-signo">
+                                <img src="${imgSigno}" alt="${signo}" class="imagen-signo">
                                 <div class="descrip-contain-signo">
                                     <div class="nombre-signo">${signo}</div>
-                                    <div class="descripcion-signo">${descripcion}</div>
+                                    <div class="descripcion-signo">${descSigno}</div>
                                     </div>
                            </div>`;
 }
