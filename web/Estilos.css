@@ -235,3 +235,34 @@ td.columna2, td.columna3{
     padding: 5px 10px;
     display: none;
 }
+
+/*Ejercicio 4*/
+
+#f1 .resultado-signo {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+#f1 .nombre-signo {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#f1 .descripcion-signo{
+    font-size: 16px;
+    font-family: sans-serif;
+}
+#f1 .imagen-signo {
+    width: 400px;
+    height: 400px;
+    margin-right: 20px;
+}
+#f1 .descrip-contain-signo {
+    display: flex;
+    flex-direction: column;
+}
+#f1 .tabla-signo {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
