@@ -178,3 +178,55 @@ function mostrarSigno(){
                                     </div>
                            </div>`;
 }
+
+/*Ejercicio 5*/
+
+function darEmpleado() {
+
+    let codEmp = document.formEmp.codigo.value.trim(); //trim(): Para no dejar espacios en blancos en los extremos
+
+    //Verificamos el correcto ingreso del código (formato numérico)
+    if (codEmp.length !== 4 || isNaN(codEmp)) {
+        document.getElementById('validar-empleado').innerText = "¡Por favor, ingrese un código numérico tal como se indica al inicio!";
+        document.getElementById('result2').innerText = "";
+        return;
+    } else {
+        document.getElementById('validar-empleado').innerText = "";
+    }
+
+    // Variables que forman parte del código del empleado
+    let numEC = parseInt(codEmp.charAt(0));
+    let edad = parseInt(codEmp.charAt(1)+codEmp.charAt(2));
+    let codGen = parseInt(codEmp.charAt(3));
+
+    // Inicializamos la variable de "Estado Civil"
+    let estCiv = "";
+    //Establecemos 
+    if (numEC == 1) {
+        estCiv = "Soltero";
+    }else if (numEC == 2) {
+        estCiv = "Casado";
+    }else if (numEC == 3) {
+        estCiv = "Viudo";
+    }else if (numEC == 4) {
+        estCiv = "Divorciado";
+    } else {
+        document.getElementById('validar-empleado').innerText = "El código que ha ingresado no se encuentra en el sistema\n"
+        +"Por favor, ingrese nuevamente el código";
+        document.getElementById('result2').innerText = "";
+        return;
+    }
+
+    // Determinar género
+    let genero = "";
+    if (codGen % 2 == 0) {
+        genero = "Femenino";
+    } else {
+        genero = "Masculino";
+    }
+
+    // Mostrar el resultado
+    document.getElementById('result2').innerHTML = `<p><strong>Estado civil:</strong> ${estCiv}</p>
+                                            <p><strong>Edad:</strong> ${edad} años</p>
+                                            <p><strong>Sexo:</strong> ${genero}</p>`;
+}

@@ -89,5 +89,17 @@
         </table>
         <div id="validar-signo" class="validar-datos"></div>
     </form>
+    <br>
+    <form name="formEmp" id="f1">
+    	<label>Ejercicio: Mostrar información del empleado a partir de su código de empleado</label>
+    	<br><br>
+        <label>Ingrese el código del empleado (4 cifras numericas):
+        	<input type="text" id="codigo" name="codigo" maxlength="4" required>
+        </label>
+        <br><br>
+        <input value="Mostrar Empleado" type="button" onclick="darEmpleado();">
+        <div id="result2"></div>
+        <div id="validar-empleado" class="validar-datos"></div>
+    </form>
 </body>
 </html>
