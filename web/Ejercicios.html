@@ -10,13 +10,13 @@
 <body>
 	<center><h1>ENTREGABLE 3</h1></center>
 	<form id="f1">
-		<label>Ejercicio: Al pasar el mouse por una imagen que muestre una descripción de la imagen.</label>
+		<label>Ejercicio 1: Al pasar el mouse por una imagen que muestre una descripción de la imagen.</label>
 		<br>
 		<iframe src="Imagenes.html" width="500" height="200" height="500" frameborder="0" scrolling="no" ></iframe>
 	</form>
 	<br>
 	<form name="Binario_Octal" id="f1">
-		<label>Ejercicio: Bases menores de 10 a decimales</label>
+		<label>Ejercicio 2: Bases menores de 10 a decimales</label>
 		<br>
 		<br>
 		<label>Ingrese el tipo de base que quiere convertir a decimal (Menores a base 10): </label>
@@ -37,7 +37,7 @@
 	</form>
 	<br>
 	<form name="TrianguloConstructor" id="f1">
-		<label>Ejercicio: Construir una triángulo con cualquier carácter</label>
+		<label>Ejercicio 3: Construir una triángulo con cualquier carácter</label>
 		<br>
 		<br>		
 		<input type="text" name="input">
@@ -58,7 +58,7 @@
         <table class="tabla-signo">
             <tr>
                 <td>
-                    <label>Ejercicio: Mostrar signo zodiacal por fecha de nacimiento</label>
+                    <label>Ejercicio 4: Mostrar signo zodiacal por fecha de nacimiento</label>
                 </td>
             </tr>
             <tr>
@@ -66,7 +66,7 @@
                     <label for="dia">Ingresa o elija el dia de su nacimiento:</label>
                 </td>
                 <td>
-                    <input name="dia" required="required" step="1" type="number">
+                    <input name="dia" required="required" step="1" type="number" min="1" max="31">
                 </td>
             </tr>
             <tr>
@@ -74,13 +74,14 @@
                     <label for="mes">Ingresa o elija el mes de nacimiento:</label>
                 </td>
                 <td>
-                    <input name="mes" required="required" step="1" type="number">
+                    <input name="mes" required="required" step="1" type="number"  min="1" max="12">
                 </td>
             </tr>
             <tr align="center">
                 <td colspan="2" rowspan="1">
                     <input value="Mostrar signo" type="button" onclick="mostrarSigno();">
-                    <input type="reset">
+                    <input value="Limpiar" type="reset">
+                    <input value="Reestablecer" type="button" onclick="reestablecerSigno();">
                 </td>
             </tr>
             <tr>
@@ -93,13 +94,14 @@
     </form>
     <br>
     <form name="formEmp" id="f1">
-    	<label>Ejercicio: Mostrar información del empleado a partir de su código de empleado</label>
+    	<label>Ejercicio 5: Mostrar información del empleado a partir de su código de empleado</label>
     	<br><br>
         <label>Ingrese el código del empleado (4 cifras numericas):
-        	<input type="text" id="codigo" name="codigo" maxlength="4" required>
+        	<input type="text" id="codigo" name="codigo" maxlength="4" required="required">
         </label>
         <br><br>
         <input value="Mostrar Empleado" type="button" onclick="darEmpleado();">
+        <input value="Reestablecer" type="button" onclick="reestablecerEmpleado();">
         <div id="result2"></div>
         <div id="validar-empleado" class="validar-datos"></div>
     </form>
