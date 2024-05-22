@@ -73,11 +73,11 @@ function cambiarTamaño() {
         if (tamano>101) {
             alert('Recomendamos no pasarse del límite')
 
-        }
-            else{
+        }else{
         document.getElementById('tamaño').style.fontSize=tamano+'px';
-    }}
+        }
     }
+}
 
 
 function reestablecerTamaño() {
@@ -135,7 +135,10 @@ function quitarDescripcion3() {
 }
 
 /*Ejercicio 4*/
+<<<<<<< HEAD
+=======
 
+>>>>>>> 90ed17c3adcef34108ead282cac9c0ae837594d6
 function mostrarSigno(){
     let dia, mes;
     dia = parseInt (document.formsig.dia.value);
@@ -210,6 +213,15 @@ function mostrarSigno(){
                                     <div class="descripcion-signo">${descSigno}</div>
                                     </div>
                            </div>`;
+}
+function agrandarDescripSigno() {
+    var descripcionSigno = document.getElementById('descripcion-signo');
+    descripcionSigno.style.fontSize = '30px'; // Cambia el tamaño de la fuente a 20px al pasar el mouse sobre la descripción
+}
+
+function reducirDescripSigno() {
+    var descripcionSigno = document.getElementById('descripcion-signo');
+    descripcionSigno.style.fontSize = '16px'; // Restaura el tamaño de la fuente a 16px al sacar el mouse de la descripción
 }
 
 /*Ejercicio 5*/
