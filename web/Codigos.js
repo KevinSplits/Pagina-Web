@@ -1,3 +1,31 @@
+//Pagina web
+
+/*Formulario*/
+
+function validarFormulario() {
+    var nombre = document.getElementById('nombre').value;
+    var apellidos = document.getElementById('apellidos').value;
+    var correo = document.getElementById('correo').value;
+    var genero = document.getElementById('gen').value;
+    var preferencias = document.querySelectorAll('input[type="checkbox"]:checked');
+
+    //Verificar que todo los campos esten llenos (exceptuando el area de texto de "Sugerencias")
+    if (nombre === "" || apellidos === "" || correo === "" || genero === "" || preferencias.length === 0) {
+        alert("Los campos deben ser llenados obligatoriamente para ser enviado el formulario correctamente, incluyendo al menos una preferencia temática.");
+        return false;
+    } else {
+        alert("Su formulario ha sido subido exitosamente. Puede seguir navegando en la página");
+        return true;
+    }
+}
+
+function cancelarFormulario() {
+    if (confirm("¿Estás seguro que deseas cancelar? Se perderán todos los cambios hechos en tu formulario")) {
+        document.getElementById('suscripcionForm').reset();
+    }
+}
+
+//Entregable 3
 function convertirBaseADecimal() {
     // Función para convertir un número en base a decimal
     function convertirBaseADecimal(base, numero) {
@@ -135,10 +163,7 @@ function quitarDescripcion3() {
 }
 
 /*Ejercicio 4*/
-<<<<<<< HEAD
-=======
 
->>>>>>> 90ed17c3adcef34108ead282cac9c0ae837594d6
 function mostrarSigno(){
     let dia, mes;
     dia = parseInt (document.formsig.dia.value);
