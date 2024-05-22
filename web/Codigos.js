@@ -428,6 +428,9 @@ function reducirDescripSigno() {
     var descripcionSigno = document.getElementById('descripcion-signo');
     descripcionSigno.style.fontSize = '16px'; // Restaura el tamaño de la fuente a 16px al sacar el mouse de la descripción
 }
+function reestablecerSigno() {
+    document.getElementById('result1').innerHTML = "";
+}
 
 /*Ejercicio 5*/
 
