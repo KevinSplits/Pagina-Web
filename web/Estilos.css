@@ -146,10 +146,33 @@ a:hover {
 	font-size: 15px;
 	color:white;
 }
+
+/*Video.hmtl*/
+
 #video{
 	background-image:url(imagen/fondo.png);
 	color:white;
 	font-size:20px;
+}
+.contenedorVideo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.elemVideo {
+	/*Para dividir en 3 columnas (33.33%) y 
+	que tengan una diferencia de espacio (20px)*/
+    flex-basis: calc(33.33% - 20px); 
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.elemVideo iframe {
+    display: block;
+    margin: 0 auto 10px;
 }
 
 .tabla table {
