@@ -415,6 +415,7 @@ function reducirDescripSigno() {
 
 function reestablecerSigno() {
     document.getElementById('result1').innerHTML = "";
+    document.getElementById('validar-signo').innerText = ""
 }
 
 /*Ejercicio 5*/
@@ -464,12 +465,25 @@ function darEmpleado() {
     }
 
     // Mostrar el resultado
-    document.getElementById('result2').innerHTML = `<p><strong>Estado civil:</strong> ${estCiv}</p>
-                                            <p><strong>Edad:</strong> ${edad} años</p>
-                                            <p><strong>Sexo:</strong> ${genero}</p>`;
+    document.getElementById('result2').innerHTML = `<p onmouseover="cambiarFondoEmp()" onmouseout="volverFondoEmp()">
+                                                        <strong>Estado civil:</strong> ${estCiv}<br>
+                                                        <strong>Edad:</strong> ${edad} años<br>
+                                                        <strong>Sexo:</strong> ${genero}
+                                                    </p>`;
+    result2.onmouseover = cambiarColorFondo;
+    result2.onmouseout = restaurarColorFondo;                                        
+}
+
+function cambiarFondoEmp() {
+    document.getElementById('result2').style.backgroundColor = "#cfe2f3"; 
+}
+
+function volverFondoEmp() {
+    document.getElementById('result2').style.backgroundColor = ""; 
 }
 
 function reestablecerEmpleado() {
     document.getElementById('result2').innerHTML = "";
+    document.getElementById('validar-empleado').innerText = ""
 }
 
