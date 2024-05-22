@@ -4,21 +4,22 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="Estilos.css">
+	<script src="Codigos.js"></script>
 	<title></title>
 </head>
 <body class="BordeBodyForm">
 	<div class="formulario">
-	<form>
+	<form id="suscripcionForm" onsubmit="return validarFormulario()">
 		<fieldset>
 			<legend>Formulario de suscripción</legend>
 			<label>Nombre: </label>
-			<input type="text" name="nombre"><br><br>
+			<input type="text" name="nombre" id="nombre" required><br><br>
 			<label>Apellidos: </label>
-			<input type="text" name="apellidos"><br><br>
+			<input type="text" name="apellidos" id="apellidos" required><br><br>
 			<label>Email: </label>
-			<input type="text" name="correo"><br><br>
+			<input type="text" name="correo" id="correo" required><br><br>
 			<label>Género:</label>
-			<select name="gen">
+			<select name="gen"  id="gen" required>
 				<option>Maculino</option>
 				<option>Femenino</option>
 			</select> <br><br>
@@ -28,12 +29,11 @@
 			 <input type="checkbox" id="Preferencias3" name="tool" checked />Herramientas tecnológicas relacionadas con Minería de Datos <br>
 			 <input type="checkbox" id="Preferencias4" name="rec" checked />Recursos y talleres sobre Minería de Datos<br><br>
 			<label>Sugerencias</label><br><br>
-			<textarea rows="5" cols="30"></textarea>
+			<textarea rows="5" cols="30" id="sugerencias"></textarea>
 			<br><br>
-			<input type="submit" name="enviar" value="Enviar">
+			<input type="submit" value="Enviar">
 			<input type="reset" name="borrar" value="Borrar">
-			<button>Guardar</button>
-			<button>Cancelar</button>		
+			<button type="button" onclick="cancelarFormulario()">Cancelar</button>		
 		</fieldset>
 		
 	</form>
