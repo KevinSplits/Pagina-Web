@@ -25,7 +25,7 @@ function cancelarFormulario() {
     }
 }
 
-//Entregable 3
+/*Ejercicio 2*/
 function convertirBaseADecimal() {
     // Función para convertir un número en base a decimal
     function convertirBaseADecimal(base, numero) {
@@ -62,6 +62,7 @@ function convertirBaseADecimal() {
     document.Binario_Octal.output.value = resultado !== -1 ? resultado : "Error: El número ingresado no pertenece a la base especificada.";
 }
 
+/*Ejercicio 3*/
 function construirTriangulo() {
     let caracter = document.TrianguloConstructor.input.value;
     let tamano = parseInt(document.TrianguloConstructor.input1.value);
@@ -112,7 +113,7 @@ function reestablecerTamaño() {
     document.getElementById('tamaño').style.fontSize='16px';
 }
 
-
+/*Imagenes mostradas en ejercicio*/
 function ponerDescripcion() {
     const descripcion = document.getElementById('descripcion');
     descripcion.style.display = 'block';
@@ -122,7 +123,7 @@ function quitarDescripcion() {
     const descripcion = document.getElementById('descripcion');
     descripcion.style.display = 'none';
 }
-
+/*Imagenes mostradas en inicio*/
 function ponerDescripcion1() {
    const descripcion = document.getElementById('descripcion1');
     descripcion.style.display = 'block';
