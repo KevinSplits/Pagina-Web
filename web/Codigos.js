@@ -167,8 +167,6 @@ function quitarDescripcion3() {
     document.getElementById('imagen2').style.opacity = 1;
 }
 
-<<<<<<< HEAD
-=======
 /*-----Formulario-----*/
 
 function validarFormulario() {
@@ -290,6 +288,11 @@ function mostrarSigno(){
     let signo = '';
     let descSigno = '';
     let imgSigno = '';
+
+    if ((dia === '' || isNaN(dia) || dia < 1 || dia > 31) || (mes === '' || isNaN(mes) || mes < 1 || mes > 12)) {
+        document.getElementById('validar-signo').innerText = "Por favor, ingrese valores numéricos para el día y el mes";
+        return;
+    } 
 
     if((dia>=21&&mes==3)||(dia<=20&&mes==4)){
         signo = 'Aries';
