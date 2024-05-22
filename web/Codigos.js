@@ -415,7 +415,7 @@ function reducirDescripSigno() {
 
 function reestablecerSigno() {
     document.getElementById('result1').innerHTML = "";
-    document.getElementById('validar-signo').innerText = ""
+    document.getElementById('validar-signo').innerText = "";
 }
 
 /*Ejercicio 5*/
@@ -484,6 +484,6 @@ function volverFondoEmp() {
 
 function reestablecerEmpleado() {
     document.getElementById('result2').innerHTML = "";
-    document.getElementById('validar-empleado').innerText = ""
+    document.getElementById('validar-empleado').innerText = "";
 }
 
