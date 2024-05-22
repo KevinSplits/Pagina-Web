@@ -56,6 +56,13 @@ footer{
 	color: #333333;
 
 }
+article{
+    padding: 20px;
+	font-size: 25px;
+	background-color: #C1D4F7 ;
+	color: #333333;
+}
+
 nav{
 	float: left;
 	width: 20%;
@@ -67,28 +74,9 @@ nav ul li{
 	list-style-type: none;
 	padding-top: 20px;
 }
-article{
-	float: left;
-	padding: 20px;
-	width: 60%;
-	background-color: #FFFFFF;
-	height: 300px;
-}
-aside{
-	height: 300px;
-	background: #FFB128;
-	float: right;
-	width: 20%;
-	padding: 20px;
-	height: 300px;
-}
 
-@media(max-width: 600px){
-	nav, section, aside, footer{
-		width: 100%;
-		height: auto;
-	}
-}
+
+
 .BordeBodyForm{
 	background-image: url(imagen/form1.png);
     background-repeat: no-repeat;
@@ -203,9 +191,11 @@ ul{
 
 .viñetas1{
 	list-style: square;
+
 }
 .viñetas2{
 	list-style: circle;
+	text-align:left;
 }
 table.datos{
 	width: 100%;
@@ -334,4 +324,7 @@ td.columna2, td.columna3{
 	color: red;
 }
 
-
+#metodo p{
+	text-align:left;
+	float: left;
+}

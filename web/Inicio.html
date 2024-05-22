@@ -10,7 +10,7 @@
 </head> 
 <body id="body1">
 
-<!-- Ponle a los titulos negrita y un tipo de letra bonita -->
+
 <header>
 <center><h1>Informe sobre Minería de Datos</h1></center></td>
 <p id="tamaño"> La minería de datos es un proceso que implica descubrir patrones, tendencias y relaciones significativas en conjuntos de datos grandes y complejos. Su objetivo es extraer información valiosa que pueda ser utilizada para la toma de decisiones, predicciones y optimización en diversos campos.</p>
@@ -20,6 +20,52 @@
     <img  src="imagen/datos.png" alt="Imagen" id="imagen2">
     <div class="descripcion3" id="descripcion3">Icono de la minería de datos</div></center>
 </header>
+<article>
+	<center><h1>Historia de la Minería de Datos</h1></center></td>
+    <h2>Años 1960-1970: Los Inicios</h2>
+    <ul>
+        <li><strong>Procesamiento de Datos</strong>: Se utilizaban tarjetas perforadas y grandes computadoras mainframe. Las empresas comenzaron a recolectar datos, pero el análisis estaba limitado a cálculos estadísticos básicos.</li>
+        <li><strong>Base de Datos y SQL</strong>: Se desarrollaron las primeras bases de datos y el lenguaje SQL (Structured Query Language), que permitió gestionar y recuperar datos de manera más eficiente.</li>
+    </ul>
+
+    <h2>Años 1980: Primeras Herramientas y Algoritmos</h2>
+    <ul>
+        <li><strong>Data Warehousing</strong>: Surgieron los primeros almacenes de datos (data warehouses), consolidando información de múltiples fuentes en una base de datos central.</li>
+        <li><strong>Machine Learning</strong>: Aparecieron los primeros algoritmos de aprendizaje automático, como los árboles de decisión y las redes neuronales, aunque aún en una etapa temprana.</li>
+        <li><strong>Exploración de Datos</strong>: Las herramientas para la exploración de datos se volvieron más sofisticadas, facilitando el análisis descriptivo y el descubrimiento de patrones básicos en los datos.</li>
+    </ul>
+
+    <h2>Años 1990: Consolidación de la Minería de Datos</h2>
+    <ul>
+        <li><strong>Definición del Campo</strong>: La minería de datos se consolida como un campo distinto dentro del análisis de datos y la inteligencia empresarial.</li>
+        <li><strong>Algoritmos Avanzados</strong>: Desarrollo y refinamiento de algoritmos clave como la regresión logística, K-means y el algoritmo Apriori para el descubrimiento de reglas de asociación.</li>
+        <li><strong>Software Especializado</strong>: Aparición de las primeras herramientas comerciales de minería de datos, como SAS y SPSS, así como la popularización de software académico como Weka.</li>
+    </ul>
+
+    <h2>Años 2000: Expansión y Popularización</h2>
+    <ul>
+        <li><strong>Big Data</strong>: Con el crecimiento exponencial de los datos, surge el concepto de Big Data, destacando la necesidad de nuevas técnicas y tecnologías para manejar volúmenes masivos de datos.</li>
+        <li><strong>Hadoop y MapReduce</strong>: Google introduce el modelo de programación MapReduce, y Apache desarrolla Hadoop, revolucionando la capacidad de procesar grandes conjuntos de datos distribuidos.</li>
+        <li><strong>Visualización de Datos</strong>: Se desarrollan herramientas avanzadas de visualización de datos que permiten a los analistas interpretar mejor los resultados de la minería de datos.</li>
+    </ul>
+
+    <h2>Años 2010: Integración con la Inteligencia Artificial</h2>
+    <ul>
+        <li><strong>Deep Learning</strong>: Los avances en el aprendizaje profundo (Deep Learning) y el incremento de la capacidad de procesamiento llevan a la creación de modelos mucho más complejos y precisos.</li>
+        <li><strong>Herramientas de Código Abierto</strong>: La popularización de herramientas de código abierto como R y Python, junto con sus bibliotecas especializadas (pandas, scikit-learn, TensorFlow), democratizan el acceso a la minería de datos.</li>
+        <li><strong>Automatización y AutoML</strong>: Surgen herramientas que automatizan gran parte del proceso de minería de datos, haciendo más accesible la creación de modelos complejos sin necesidad de ser un experto.</li>
+    </ul>
+
+    <h2>Años 2020: Minería de Datos en la Era del Big Data y la IA</h2>
+    <ul>
+        <li><strong>Inteligencia Artificial y Minería de Datos</strong>: La integración de la IA y la minería de datos se profundiza, con modelos predictivos y análisis prescriptivos cada vez más avanzados.</li>
+        <li><strong>Internet de las Cosas (IoT)</strong>: La proliferación de dispositivos conectados genera cantidades masivas de datos que son analizados mediante técnicas de minería de datos.</li>
+        <li><strong>Ética y Privacidad</strong>: Aumenta la preocupación por la privacidad y la ética en la recolección y el uso de datos, impulsando regulaciones como el GDPR en Europa.</li>
+    </ul>
+    <a href="javascript:resaltarTexto()">Resaltar Texto</a>
+</body>
+</article>
+
 <section><center><h2>El proceso típico de minería de datos comprende varias etapas:</h2></center>
 <ul>
 	<div class="viñetas1">
@@ -52,10 +98,21 @@
     <img  src="imagen/Aplicaciones.jpeg" alt="Imagen" id="imagen">
     <div class="descripcion1" id="descripcion1">Especialista en big data usando la minería de datos</div>
 </div>
+<h1>Metodologías de Minería de Datos</h1>
+        
+        <p>A partir del año 2000, con el gran crecimiento que surgió en el área de la minería de datos, surgieron tres nuevos modelos que plantean un enfoque sistemático para llevar a cabo el proceso: SEMMA, Catalyst (conocida como P3TQ) y CRISP-DM.</p>
+        
+        <p>Como se puede observar en la Figura 1, CRISP-DM se ha convertido en la metodología más utilizada, según un estudio publicado en el año 2007 por la comunidad KDnuggets (Data Mining Community's Top Resource).</p>
 
-
-</center>
-<center>
+        <ul>
+        	<div class="viñetas2">
+            <li><strong>SEMMA (Sample, Explore, Modify, Model, Assess)</strong>: Desarrollada por SAS Institute. Consiste en cinco etapas para el proceso de minería de datos: Sample, Explore, Modify, Model y Assess.</li>
+            <li><strong>Catalyst (P3TQ)</strong>: También conocida como P3TQ, fue desarrollada por un equipo de investigadores en el Laboratorio de Minería de Datos de la Universidad de Kentucky. Se compone de cuatro fases: Preprocessing, Transforming, Training y Querying.</li>
+            <li><strong>CRISP-DM (Cross-Industry Standard Process for Data Mining)</strong>: Es quizás el modelo más conocido y ampliamente utilizado en la industria. Se compone de seis fases: Business Understanding, Data Understanding, Data Preparation, Modeling, Evaluation y Deployment.</li>
+        </div>
+        </ul>
+        <p>Estas metodologías proporcionan un marco estructurado para guiar el proceso de minería de datos y ayudar a garantizar que se obtengan resultados significativos y útiles.</p>
+    </div>
 </section>
 
 <footer>

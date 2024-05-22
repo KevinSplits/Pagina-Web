@@ -263,3 +263,13 @@ function darEmpleado() {
                                             <p><strong>Edad:</strong> ${edad} años</p>
                                             <p><strong>Sexo:</strong> ${genero}</p>`;
 }
+ function resaltarTexto() {
+            const elementos = document.querySelectorAll('article ul li');
+            elementos.forEach(elemento => {
+                if (elemento.style.backgroundColor === 'yellow') {
+                    elemento.style.backgroundColor = '';
+                } else {
+                    elemento.style.backgroundColor = 'yellow';
+                }
+            });
+        }
