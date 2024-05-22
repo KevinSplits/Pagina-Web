@@ -167,6 +167,17 @@ function quitarDescripcion3() {
     document.getElementById('imagen2').style.opacity = 1;
 }
 
+function resaltarTexto() {
+    var elementos = document.querySelectorAll('#articulo li');
+    elementos.forEach(function(elemento) {
+        if (elemento.style.backgroundColor === 'yellow') {
+            elemento.style.backgroundColor = '';
+        } else {
+            elemento.style.backgroundColor = 'yellow';
+        }
+    });
+}
+
 /*-----Formulario-----*/
 
 function validarFormulario() {
@@ -178,7 +189,8 @@ function validarFormulario() {
 
     //Verificar que todo los campos esten llenos (exceptuando el area de texto de "Sugerencias")
     if (nombre === "" || apellidos === "" || correo === "" || genero === "" || preferencias.length === 0) {
-        alert("Los campos deben ser llenados obligatoriamente para ser enviado el formulario correctamente, incluyendo al menos una preferencia temática.");
+        alert("Los campos deben ser llenados obligatoriamente para ser enviado el formulario correctamente, "+
+            "incluyendo al menos una preferencia temática.");
         return false;
     } else {
         alert("Su formulario ha sido subido exitosamente. Puede seguir navegando en la página");
