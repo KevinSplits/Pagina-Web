@@ -1,6 +1,69 @@
-//Pagina web
+/*-----------------------------------Pagina web---------------------------------*/
 
-/*Formulario*/
+/*----Inicio----*/
+
+/*-----Modificar el tamaño de la letra-----*/
+
+function cambiarTamaño() {
+    var tamano=prompt('Inserte el tamaño que quieres poner')
+    if (tamano<1) {
+        alert('Ingrese un número valido')
+    }else{
+        if (tamano>101) {
+            alert('Recomendamos no pasarse del límite')
+
+        }else{
+        document.getElementById('tamaño').style.fontSize=tamano+'px';
+        }
+    }
+}
+
+function reestablecerTamaño() {
+    document.getElementById('tamaño').style.fontSize='16px';
+}
+
+/*----Imagenes mostradas en inicio----*/
+
+function ponerDescripcion1() {
+   const descripcion = document.getElementById('descripcion1');
+    descripcion.style.display = 'block';
+    document.getElementById('imagen').style.opacity = 0.6;
+
+}
+
+function quitarDescripcion1() {
+    const descripcion = document.getElementById('descripcion1');
+    descripcion1.style.display = 'none';
+    document.getElementById('imagen').style.opacity = 1;
+}
+
+function ponerDescripcion2() {
+    const descripcion = document.getElementById('descripcion2');
+    descripcion.style.display = 'block';
+    document.getElementById('imagen1').style.opacity = 0.6;
+
+}
+
+function quitarDescripcion2() {
+    const descripcion = document.getElementById('descripcion2');
+    descripcion.style.display = 'none';
+    document.getElementById('imagen1').style.opacity = 1;
+}
+
+function ponerDescripcion3() {
+    const descripcion = document.getElementById('descripcion3');
+    descripcion.style.display = 'block';
+    document.getElementById('imagen2').style.opacity = 0.6;
+
+}
+
+function quitarDescripcion3() {
+    const descripcion = document.getElementById('descripcion3');
+    descripcion.style.display = 'none';
+    document.getElementById('imagen2').style.opacity = 1;
+}
+
+/*-----Formulario-----*/
 
 function validarFormulario() {
     var nombre = document.getElementById('nombre').value;
@@ -25,6 +88,21 @@ function cancelarFormulario() {
     }
 }
 
+/*-----------------Entregable 3---------------------------*/
+
+/*-----Ejercicio 1-----*/
+
+/*-----Imagenes mostradas en ejercicio-----*/
+
+function ponerDescripcion() {
+    const descripcion = document.getElementById('descripcion');
+    descripcion.style.display = 'block';
+}
+
+function quitarDescripcion() {
+    const descripcion = document.getElementById('descripcion');
+    descripcion.style.display = 'none';
+}
 /*Ejercicio 2*/
 function convertirBaseADecimal() {
     // Función para convertir un número en base a decimal
@@ -63,6 +141,7 @@ function convertirBaseADecimal() {
 }
 
 /*Ejercicio 3*/
+
 function construirTriangulo() {
     let caracter = document.TrianguloConstructor.input.value;
     let tamano = parseInt(document.TrianguloConstructor.input1.value);
@@ -90,77 +169,6 @@ function construirTriangulo() {
 
     // Mostrar el resultado en el div con el id "contenido"
     document.getElementById('contenido').innerHTML = triangulo;
-}
-
-
-
-function cambiarTamaño() {
-    var tamano=prompt('Inserte el tamaño que quieres poner')
-    if (tamano<1) {
-        alert('Ingrese un número valido')
-    }else{
-        if (tamano>101) {
-            alert('Recomendamos no pasarse del límite')
-
-        }else{
-        document.getElementById('tamaño').style.fontSize=tamano+'px';
-        }
-    }
-}
-
-
-function reestablecerTamaño() {
-    document.getElementById('tamaño').style.fontSize='16px';
-}
-
-/*Imagenes mostradas en ejercicio*/
-function ponerDescripcion() {
-    const descripcion = document.getElementById('descripcion');
-    descripcion.style.display = 'block';
-}
-
-function quitarDescripcion() {
-    const descripcion = document.getElementById('descripcion');
-    descripcion.style.display = 'none';
-}
-/*Imagenes mostradas en inicio*/
-function ponerDescripcion1() {
-   const descripcion = document.getElementById('descripcion1');
-    descripcion.style.display = 'block';
-    document.getElementById('imagen').style.opacity = 0.6;
-
-}
-
-function quitarDescripcion1() {
-    const descripcion = document.getElementById('descripcion1');
-    descripcion1.style.display = 'none';
-    document.getElementById('imagen').style.opacity = 1;
-}
-
-function ponerDescripcion2() {
-    const descripcion = document.getElementById('descripcion2');
-    descripcion.style.display = 'block';
-    document.getElementById('imagen1').style.opacity = 0.6;
-
-}
-
-function quitarDescripcion2() {
-    const descripcion = document.getElementById('descripcion2');
-    descripcion.style.display = 'none';
-    document.getElementById('imagen1').style.opacity = 1;
-}
-
-function ponerDescripcion3() {
-    const descripcion = document.getElementById('descripcion3');
-    descripcion.style.display = 'block';
-    document.getElementById('imagen2').style.opacity = 0.6;
-
-}
-
-function quitarDescripcion3() {
-    const descripcion = document.getElementById('descripcion3');
-    descripcion.style.display = 'none';
-    document.getElementById('imagen2').style.opacity = 1;
 }
 
 /*Ejercicio 4*/
