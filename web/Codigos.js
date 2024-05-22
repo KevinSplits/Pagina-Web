@@ -465,13 +465,12 @@ function darEmpleado() {
     }
 
     // Mostrar el resultado
-    document.getElementById('result2').innerHTML = `<p onmouseover="cambiarFondoEmp()" onmouseout="volverFondoEmp()">
+    document.getElementById('result2').innerHTML = `<p onmouseover="cambiarFondoEmp()" 
+                                                        onmouseout="volverFondoEmp()">
                                                         <strong>Estado civil:</strong> ${estCiv}<br>
                                                         <strong>Edad:</strong> ${edad} años<br>
                                                         <strong>Sexo:</strong> ${genero}
-                                                    </p>`;
-    result2.onmouseover = cambiarColorFondo;
-    result2.onmouseout = restaurarColorFondo;                                        
+                                                    </p>`;                                 
 }
 
 function cambiarFondoEmp() {
