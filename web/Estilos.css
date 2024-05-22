@@ -61,6 +61,7 @@ article{
 	font-size: 25px;
 	background-color: #C1D4F7 ;
 	color: #333333;
+	text-align: left;
 }
 
 nav{
@@ -75,6 +76,12 @@ nav ul li{
 	padding-top: 20px;
 }
 
+@media (max-width: 768px) {
+    article, header, footer, section {
+        height: auto;
+        width: 100%;
+    }
+}
 
 
 .BordeBodyForm{
@@ -324,7 +331,4 @@ td.columna2, td.columna3{
 	color: red;
 }
 
-#metodo p{
-	text-align:left;
-	float: left;
-}
+
