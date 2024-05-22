@@ -103,7 +103,9 @@ function quitarDescripcion() {
     const descripcion = document.getElementById('descripcion');
     descripcion.style.display = 'none';
 }
+
 /*Ejercicio 2*/
+
 function convertirBaseADecimal() {
     // Función para convertir un número en base a decimal
     function convertirBaseADecimal(base, numero) {
