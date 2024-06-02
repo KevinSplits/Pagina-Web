@@ -60,10 +60,12 @@
             echo "<p><strong>Acciones a tomar:</strong> $acciones</p>";
             echo "<p><strong>Firma:</strong> $firma</p>";
             echo "</div>";
+            echo "<a href='javascript:history.back()' class='regresar-btn'>Regresar</a>";
             } else {
             echo "<p>No se recibieron datos del formulario.</p>";
             }
             ?>
+
 </div>
 
 </body>

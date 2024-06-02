@@ -1,47 +1,27 @@
-function Verificar_Reclamo(){
-	  document.getElementById('reclamoForm').addEventListener('submit', function(event) {
-        let isValid = true;
-        const nombre = document.getElementById('nombre');
-        const email = document.getElementById('email');
-        const telefono = document.getElementById('telefono');
-        const detalle = document.getElementById('detalle');
+function Verificar_Reclamo() {
+    const nombre = document.getElementById('nombre').value;
+    const telefono = document.getElementById('telefono').value;
+    const dni = document.getElementById('dni').value;
 
-        // Clear previous error messages
-        document.querySelectorAll('.error').forEach(element => element.remove());
+    const nombreValido = /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]+$/.test(nombre);
+    const telefonoValido = /^\+?\d+$/.test(telefono);
+    const dniValido = /^\d+$/.test(dni);
 
-        // Validación de nombre
-        if (nombre.value.trim() === '') {
-            isValid = false;
-        }
-
-        // Validación de email
-        if (email.value.trim() === '' || !validateEmail(email.value)) {
-            isValid = false;
-        }
-
-        // Validación de teléfono
-        if (telefono.value.trim() === '' || !validatePhone(telefono.value)) {
-            isValid = false;
-        }
-
-        // Validación de detalle
-        if (detalle.value.trim() === '') {
-            isValid = false;
-        }
-
-        if (!isValid) {
-            event.preventDefault();
-            alert("Por favor, completa todos los campos correctamente antes de enviar el formulario.");
-        }
-    });
-
-    function validateEmail(email) {
-        const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        return re.test(String(email).toLowerCase());
+    if (!nombreValido) {
+        alert("El nombre solo debe contener letras. Por favor, inténtelo de nuevo.");
+        return false;
     }
 
-    function validatePhone(phone) {
-        const re = /^\d{10}$/;
-        return re.test(String(phone));
+    if (!telefonoValido) {
+        alert("El teléfono solo debe contener números y el signo más (+) opcionalmente. Por favor, inténtelo de nuevo.");
+        return false;
     }
+
+    if (!dniValido) {
+        alert("El DNI solo debe contener números. Por favor, inténtelo de nuevo.");
+        return false;
+    }
+
+    // Si todos los campos son válidos, retorna true
+    return true;
 }
