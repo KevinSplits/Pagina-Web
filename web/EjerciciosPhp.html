@@ -1,66 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="EstilosPhp.css">
-	<title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="EstilosPhp.css">
+    <script src="Verificar.js"></script>
+
+    <title></title>
 </head>
 <body>
-	<div class="container">
-     <center><h1>Libro de Reclamaciones</h1></center>
-        <form id="reclamoForm" action="mostrar_reclamo.php" method="POST">
-        	<div>
-                <label>Institución especializada en la instrucción de minería de datos</label>
-            </div>
-            <div>
-                <label for="fecha">Fecha</label>
-                <input type="date" id="fecha" name="fecha" required>
-            </div>
-            
-            <div class="section-header">1. Identificación del Consumidor Reclamante</div>
-            <div>
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-            </div>
-            <div>
-                <label for="domicilio">Domicilio:</label>
-                <input type="text" id="domicilio" name="domicilio" required>
-            </div>
-            <div>
-                <label for="dni">DNI/CE:</label>
-                <input type="text" id="dni" name="dni" required>
-            </div>
-            <div>
-                <label for="telefono">Teléfono:</label>
-                <input type="tel" id="telefono" name="telefono" required>
-            </div>
-            <div>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div>
-                <label for="padre">Padre o Madre (Para el caso de menores de edad):</label>
-                <input type="text" id="padre" name="padre">
-            </div>
-            <div class="section-header">2. Identificación de la Atención Brindada</div>
-            <div>
-                <label for="detalle">Detalle:</label>
-                <textarea id="detalle" name="detalle" rows="4" cols="50" required></textarea>
-            </div>
-            <div class="section-header">3. Acciones Adoptadas por la Entidad</div>
-            <div>
-                <label for="acciones">Detalle:</label>
-                <textarea id="acciones" name="acciones" rows="4" cols="50"></textarea>
-            </div>
-            <div>
-                <label>Firma del usuario:</label>
-                <input type="text" id="firma" name="firma" required>
-            </div>
-            <div>
-                <input type="submit" value="Enviar Reclamo">
-            </div>
-        </form>
-    </div>
+          
+    <form id="formulario" onsubmit="return validarFormulario()" method="post" action="Cuota.php">
+        <center><h1>Simulador de Pago Mensual</h1></center>
+        <label for="montoCompra">Monto de la compra:</label>
+        <input type="number" step="0.01" id="montoCompra" name="montoCompra" ><br><br>
+
+        <label for="tipoTarjeta">Tipo de tarjeta:</label> <br>
+        <select id="tipoTarjeta" name="tipoTarjeta" >
+            <option value="">Seleccione...</option>
+            <option value="visa">Visa</option>
+            <option value="mastercard">MasterCard</option>
+            <option value="amex">American Express</option>
+        </select><br><br>
+
+        <label for="meses">Cantidad de meses:</label>
+        <input type="number" id="meses" name="meses" ><br><br>
+
+        <button type="submit">Calcular Cuota</button><br>
+
+    </form>
+
 </body>
 </html>

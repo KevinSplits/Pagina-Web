@@ -25,3 +25,22 @@ function Verificar_Reclamo() {
     // Si todos los campos son válidos, retorna true
     return true;
 }
+
+  function validarFormulario() {
+    var montoCompra = document.getElementById("montoCompra").value;
+    var tipoTarjeta = document.getElementById("tipoTarjeta").value;
+    var meses = document.getElementById("meses").value;
+
+    if (montoCompra == "" || tipoTarjeta == "" || meses == "") {
+        alert("Por favor complete todos los campos.");
+        return false;
+    }
+
+    if (isNaN(montoCompra) || isNaN(meses)) {
+        alert("Por favor ingrese valores numéricos válidos.");
+        return false;
+    }
+
+    // Si la validación es exitosa, enviar el formulario
+    return true;
+}
