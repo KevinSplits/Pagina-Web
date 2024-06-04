@@ -26,7 +26,7 @@ function Verificar_Reclamo() {
     return true;
 }
 
-  function validarFormulario() {
+function validarFormulario() {
     var montoCompra = document.getElementById("montoCompra").value;
     var tipoTarjeta = document.getElementById("tipoTarjeta").value;
     var meses = document.getElementById("meses").value;
@@ -43,4 +43,35 @@ function Verificar_Reclamo() {
 
     // Si la validación es exitosa, enviar el formulario
     return true;
+}
+
+// Ejercicio 04 del "Entregable 04": Función para validar el formato, el tipo y el valor de los números
+function validarNumeros() {
+    var num1 = parseInt(document.formMCMyMCD.num1.value);
+    var num2 = parseInt(document.formMCMyMCD.num2.value);
+    var num3 = parseInt(document.formMCMyMCD.num3.value);
+
+    var valid = true;
+
+    // Limpiar mensajes de error
+    document.getElementById('error-num1').innerText = "";
+    document.getElementById('error-num2').innerText = "";
+    document.getElementById('error-num3').innerText = "";
+
+    if (isNaN(num1) || num1 <= 0) {
+        document.getElementById('error-num1').innerText = "Ingrese un número entero positivo y no nulo, por favor!!!";
+        valid = false;
+    }
+
+    if (isNaN(num2) || num2 <= 0) {
+        document.getElementById('error-num2').innerText = "Ingrese un número entero positivo y no nulo, por favor!!!";
+        valid = false;
+    }
+
+    if (isNaN(num3) || num3 <= 0) {
+        document.getElementById('error-num3').innerText = "Ingrese un número entero positivo y no nulo, por favor!!!";
+        valid = false;
+    }
+
+    return valid;
 }
