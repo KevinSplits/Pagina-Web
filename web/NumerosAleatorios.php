@@ -17,7 +17,7 @@
                     
                     if ($cantidad > 0) {
                         echo "<p>Se han generado estos $cantidad números aleatorios:</p>";
-                        echo "<table>"; // Abrir adecuadamente la tabla
+                        echo "<table style='text-align: center;'>"; // Abrir adecuadamente la tabla
 
                         echo "<tr>";
                         echo "<th style='text-align: center;'></th>";
@@ -53,7 +53,6 @@
                             echo "</tr>";
                         }
                         echo "</table>"; // Cerrar adecuadamente la tabla
-                        echo "<a href='EjerciciosPhp.html' class='btnReg'>Regresar</a>";
                     } else {
                         echo "<p>Petición no válida.</p>";
                     }

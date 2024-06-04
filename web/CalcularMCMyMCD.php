@@ -12,7 +12,6 @@
         <h1 style="text-align: center;">Resultado de Cuota Mensual</h1>
         <div class="result">
             <?php
-                // Verificar si se han enviado los números a través del método GET
                 if (isset($_GET['num1']) && isset($_GET['num2']) && isset($_GET['num3'])) {
                     // Obtener los números de la URL
                     $num1 = intval($_GET['num1']);
