@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="EstilosPhp.css">
-    <script src="Codigos.js"></script>
-	<title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="EstilosPhp.css">
+    <script src="Verificar.js"></script>
+    <title></title>
 </head>
-<body>
-	<div class="container">
+<body>  
+    <div class="container">
      <center><h1>Libro de Reclamaciones</h1></center>
-        <form id="reclamoForm" action="mostrar_reclamo.php" method="POST">
-        	<div>
+        <form id="reclamoForm" action="mostrar_reclamo.php" method="post" onsubmit="return VerificarReclamo()" >
+            <div>
                 <label>Institución especializada en la instrucción de minería de datos</label>
             </div>
             <div>
                 <label for="fecha">Fecha</label>
-                <input type="date" id="fecha" name="fecha" required>
+                <input type="date" id="fecha" name="fecha" >
             </div>
             
             <div class="section-header">1. Identificación del Consumidor Reclamante</div>
             <div>
                 <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
+                <input type="text" id="nombre" name="nombre" >
             </div>
             <div>
                 <label for="domicilio">Domicilio:</label>
-                <input type="text" id="domicilio" name="domicilio" required>
+                <input type="text" id="domicilio" name="domicilio" >
             </div>
             <div>
                 <label for="dni">DNI/CE:</label>
-                <input type="text" id="dni" name="dni" required>
+                <input type="text" id="dni" name="dni" >
             </div>
             <div>
                 <label for="telefono">Teléfono:</label>
-                <input type="tel" id="telefono" name="telefono" required>
+                <input type="tel" id="telefono" name="telefono" >
             </div>
             <div>
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" >
             </div>
             <div>
                 <label for="padre">Padre o Madre (Para el caso de menores de edad):</label>
@@ -47,7 +47,7 @@
             <div class="section-header">2. Identificación de la Atención Brindada</div>
             <div>
                 <label for="detalle">Detalle:</label>
-                <textarea id="detalle" name="detalle" rows="4" cols="50" required></textarea>
+                <textarea id="detalle" name="detalle" rows="4" cols="50" ></textarea>
             </div>
             <div class="section-header">3. Acciones Adoptadas por la Entidad</div>
             <div>
@@ -56,7 +56,7 @@
             </div>
             <div>
                 <label>Firma del usuario:</label>
-                <input type="text" id="firma" name="firma" required>
+                <input type="text" id="firma" name="firma" >
             </div>
             <div>
                 <input type="submit" value="Enviar Reclamo">

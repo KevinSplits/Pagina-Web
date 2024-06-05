@@ -1,30 +1,55 @@
-function Verificar_Reclamo() {
-    const nombre = document.getElementById('nombre').value;
-    const telefono = document.getElementById('telefono').value;
-    const dni = document.getElementById('dni').value;
+function VerificarReclamo() {
+            var nombre = document.getElementById('nombre').value.trim();
+            var domicilio = document.getElementById('domicilio').value.trim();
+            var dni = document.getElementById('dni').value.trim();
+            var telefono = document.getElementById('telefono').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var detalle = document.getElementById('detalle').value.trim();
+            var acciones = document.getElementById('acciones').value.trim();
+            var firma = document.getElementById('firma').value.trim();
 
-    const nombreValido = /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]+$/.test(nombre);
-    const telefonoValido = /^\+?\d+$/.test(telefono);
-    const dniValido = /^\d+$/.test(dni);
+            if (nombre === '' || domicilio === '' || dni === '' || telefono === '' || email === '' || detalle === '' || acciones === '' || firma === '') {
+                alert("Por favor, complete todos los campos.");
+                return false;
+            }
 
-    if (!nombreValido) {
-        alert("El nombre solo debe contener letras. Por favor, inténtelo de nuevo.");
-        return false;
-    }
+             var nombreRegex = /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]+$/;
+            if (!nombreRegex.test(nombre)) {
+                alert("El nombre solo debe contener letras. Por favor, inténtelo de nuevo.");
+                return false;
+            }
 
-    if (!telefonoValido) {
-        alert("El teléfono solo debe contener números y el signo más (+) opcionalmente. Por favor, inténtelo de nuevo.");
-        return false;
-    }
+            // Validar que el teléfono solo contenga números
+            var telefonoRegex = /^\+?\d+$/;
+            if (!telefonoRegex.test(telefono)) {
+                alert("El teléfono solo debe contener números y el signo más (+) opcionalmente. Por favor, inténtelo de nuevo.");
+                return false;
+            }
 
-    if (!dniValido) {
-        alert("El DNI solo debe contener números. Por favor, inténtelo de nuevo.");
-        return false;
-    }
+            // Validar que el DNI solo contenga números
+            var dniRegex = /^\d+$/;
+            if (!dniRegex.test(dni)) {
+                alert("El DNI solo debe contener números. Por favor, inténtelo de nuevo.");
+                return false;
+            }
 
-    // Si todos los campos son válidos, retorna true
-    return true;
-}
+            // Validar que el detalle no esté vacío
+            if (detalle === '') {
+                alert("El campo detalle no puede estar vacío. Por favor, ingrese detalles del reclamo.");
+                return false;
+            }
+
+            // Validar que el formato del correo electrónico sea válido
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert("Por favor, ingrese un correo electrónico válido.");
+                return false;
+            }
+
+            // Si pasa todas las validaciones
+            return true;
+        }
+        
 
 function validarFormulario() {
     var montoCompra = document.getElementById("montoCompra").value;
@@ -38,6 +63,11 @@ function validarFormulario() {
 
     if (isNaN(montoCompra) || isNaN(meses)) {
         alert("Por favor ingrese valores numéricos válidos.");
+        return false;
+    }
+
+    if (montoCompra<0 || meses<0 ) {
+        alert("Ingrese números positivo y que no sean nulos")
         return false;
     }
 
