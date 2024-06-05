@@ -32,13 +32,13 @@
         </form>
         <br><br>
     </div>
-        
+
     <!--Ejercicio 3-->  
-    <form id="formulario" onsubmit="return validarCantidad()" method="post" action="NumerosAleatorios.php" novalidate>
+    <form name="formCantidadNumeros" method="post" onsubmit="return validarCantidad()" action="NumerosAleatorios.php" novalidate>
         <center><h1>Generador de Números Aleatorios entre 300 y 2000</h1></center>
         <label for="cantidad">¿Cuantos números deseas generar?: </label>
         <input type="number" id="cantidad" name="cantidad" required>
-        <br><br>
+        <br>
         <div id="errorCantidad" class="error"></div> 
         <br><br>
         <button type="submit">Generar Números</button>

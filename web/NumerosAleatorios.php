@@ -14,7 +14,6 @@
                 if (isset($_POST['cantidad'])) {
                     $cantidad = intval($_POST['cantidad']);
                     
-                    if ($cantidad > 0) {
                         echo "<p>Se han generado estos $cantidad números aleatorios:</p>";
                         echo "<table style='text-align: center; margin: 0 auto;'>"; // Abrir adecuadamente la tabla
 
@@ -52,10 +51,9 @@
                             echo "</tr>";
                         }
                         echo "</table>"; // Cerrar adecuadamente la tabla
-                    } else {
-                        echo "<p>Petición no válida.</p>";
-                    }
-                }
+                } else {
+                    echo "<p>Peticion no valida</p>";
+                }       
             ?>
         </div>
         <div style="text-align: center;">

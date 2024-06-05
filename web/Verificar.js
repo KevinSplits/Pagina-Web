@@ -44,20 +44,22 @@ function validarFormulario() {
     // Si la validación es exitosa, enviar el formulario
     return true;
 }
+
 // Ejercicio 03 del "Entregable 04":Función para validar la cantidad ingresada
-    function validarCantidad() {
-        var cantidadInput = document.getElementById("cantidad");
-        var cantidad = parseInt(cantidadInput.value);
+function validarCantidad() {
+    var cantidad = document.formCantidadNumeros.cantidad.value;
+    var errorCantidad = document.getElementById('errorCantidad');
+    document.getElementById('errorCantidad').innerText = "";
 
-        // Verificar si la cantidad es positiva
-        if (cantidad <= 0 || isNaN(cantidad)) {
-            var errorCantidad = document.getElementById("errorCantidad");
-            errorCantidad.textContent = "La cantidad de números aleatorios debe ser positiva.";
-            return false; // Detener el envío del formulario
-        }
-
-        return true; // Permitir el envío del formulario
+    // Verificar si la cantidad es un número positivo
+    if (cantidad <= 0 || isNaN(cantidad) || cantidad == "") {
+        errorCantidad.innerText = "La cantidad de números aleatorios debe ser positiva y no nula!!!";
+        return false;
     }
+
+    return true;
+}
+
 // Ejercicio 04 del "Entregable 04": Función para validar el formato, el tipo y el valor de los números
 function validarNumeros() {
     var num1 = parseInt(document.formMCMyMCD.num1.value);
