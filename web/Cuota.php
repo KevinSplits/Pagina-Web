@@ -48,7 +48,7 @@
                 echo "<td>" . number_format($cuota, 2) . "</td>";
                 echo "<td>" . number_format($pagoInteres, 2) . "</td>";
                 echo "<td>" . number_format($pagoCapital, 2) . "</td>";
-                echo "<td>" . number_format(max($deuda, 0), 2) . "</td>";
+                echo "<td >" . number_format(max($deuda, 0), 2) . "</td>";
                 echo "</tr>";
             }
 
