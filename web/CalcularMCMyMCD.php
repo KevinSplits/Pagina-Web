@@ -9,7 +9,6 @@
 </head>
 <body>
     <div class="container">
-        <h1 style="text-align: center;">Resultado de Cuota Mensual</h1>
         <div class="result">
             <?php
                 if (isset($_GET['num1']) && isset($_GET['num2']) && isset($_GET['num3'])) {

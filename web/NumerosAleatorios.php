@@ -9,7 +9,6 @@
 </head>
 <body>
     <div class="container">
-        <h1 style="text-align: center;">Resultado de Cuota Mensual</h1>
         <div class="result">
             <?php
                 if (isset($_POST['cantidad'])) {
@@ -17,7 +16,7 @@
                     
                     if ($cantidad > 0) {
                         echo "<p>Se han generado estos $cantidad números aleatorios:</p>";
-                        echo "<table style='text-align: center;'>"; // Abrir adecuadamente la tabla
+                        echo "<table style='text-align: center; margin: 0 auto;'>"; // Abrir adecuadamente la tabla
 
                         echo "<tr>";
                         echo "<th style='text-align: center;'></th>";
