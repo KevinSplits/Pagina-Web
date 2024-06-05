@@ -1,55 +1,73 @@
+//Ejercicio 01 del "Entregable 04": Verificar campos en Libro de Reclamos
 function VerificarReclamo() {
-            var nombre = document.getElementById('nombre').value.trim();
-            var domicilio = document.getElementById('domicilio').value.trim();
-            var dni = document.getElementById('dni').value.trim();
-            var telefono = document.getElementById('telefono').value.trim();
-            var email = document.getElementById('email').value.trim();
-            var detalle = document.getElementById('detalle').value.trim();
-            var acciones = document.getElementById('acciones').value.trim();
-            var firma = document.getElementById('firma').value.trim();
+    var nombre = document.getElementById('nombre').value.trim();
+    var domicilio = document.getElementById('domicilio').value.trim();
+    var dni = document.getElementById('dni').value.trim();
+    var telefono = document.getElementById('telefono').value.trim();
+    var email = document.getElementById('email').value.trim();
+    var detalle = document.getElementById('detalle').value.trim();
+    var acciones = document.getElementById('acciones').value.trim();
+    var firma = document.getElementById('firma').value.trim();
 
-            if (nombre === '' || domicilio === '' || dni === '' || telefono === '' || email === '' || detalle === '' || acciones === '' || firma === '') {
-                alert("Por favor, complete todos los campos.");
-                return false;
+    if (nombre === '' || domicilio === '' || dni === '' || telefono === '' || email === '' || detalle === '' || acciones === '' || firma === '') {
+        alert("Por favor, complete todos los campos.");
+        return false;
+    }
+
+     var nombreRegex = /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]+$/;
+    if (!nombreRegex.test(nombre)) {
+        alert("El nombre solo debe contener letras. Por favor, inténtelo de nuevo.");
+        return false;
+    }
+
+    // Validar que el teléfono solo contenga números
+    var telefonoRegex = /^\+?\d+$/;
+    if (!telefonoRegex.test(telefono)) {
+        alert("El teléfono solo debe contener números y el signo más (+) opcionalmente. Por favor, inténtelo de nuevo.");
+        return false;
+    }
+
+    // Validar que el DNI solo contenga números
+    var dniRegex = /^\d+$/;
+    if (!dniRegex.test(dni)) {
+        alert("El DNI solo debe contener números. Por favor, inténtelo de nuevo.");
+        return false;
+    }
+
+    // Validar que el detalle no esté vacío
+    if (detalle === '') {
+        alert("El campo detalle no puede estar vacío. Por favor, ingrese detalles del reclamo.");
+        return false;
+    }
+
+    // Validar que el formato del correo electrónico sea válido
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        alert("Por favor, ingrese un correo electrónico válido.");
+        return false;
+    }
+
+    // Si pasa todas las validaciones
+    return true;
+}
+
+//Ejercicio 02 del "Entregable 04": Validar campos y colocar precios por selección
+function CambiarSeleccion() {
+     var productos = document.getElementById("ProductosDataMining").value;
+     switch (productos) {
+                case "SO1":
+                    document.getElementById("montoCompra").value=129.9;
+                    break;
+                case "SO2":
+                    document.getElementById("montoCompra").value=99.9;
+                    break;
+                case "SO3":
+                    document.getElementById("montoCompra").value=249.9;
+                    break;
+                default:
+                    document.getElementById("montoCompra").value=0;
             }
-
-             var nombreRegex = /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]+$/;
-            if (!nombreRegex.test(nombre)) {
-                alert("El nombre solo debe contener letras. Por favor, inténtelo de nuevo.");
-                return false;
-            }
-
-            // Validar que el teléfono solo contenga números
-            var telefonoRegex = /^\+?\d+$/;
-            if (!telefonoRegex.test(telefono)) {
-                alert("El teléfono solo debe contener números y el signo más (+) opcionalmente. Por favor, inténtelo de nuevo.");
-                return false;
-            }
-
-            // Validar que el DNI solo contenga números
-            var dniRegex = /^\d+$/;
-            if (!dniRegex.test(dni)) {
-                alert("El DNI solo debe contener números. Por favor, inténtelo de nuevo.");
-                return false;
-            }
-
-            // Validar que el detalle no esté vacío
-            if (detalle === '') {
-                alert("El campo detalle no puede estar vacío. Por favor, ingrese detalles del reclamo.");
-                return false;
-            }
-
-            // Validar que el formato del correo electrónico sea válido
-            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                alert("Por favor, ingrese un correo electrónico válido.");
-                return false;
-            }
-
-            // Si pasa todas las validaciones
-            return true;
-        }
-        
+}
 
 function validarFormulario() {
     var montoCompra = document.getElementById("montoCompra").value;
@@ -121,19 +139,3 @@ function validarNumeros() {
     return valid;
 }
 
-function CambiarSeleccion() {
-     var productos = document.getElementById("ProductosDataMining").value;
-     switch (productos) {
-                case "SO1":
-                    document.getElementById("montoCompra").value=129.9;
-                    break;
-                case "SO2":
-                    document.getElementById("montoCompra").value=99.9;
-                    break;
-                case "SO3":
-                    document.getElementById("montoCompra").value=249.9;
-                    break;
-                default:
-                    document.getElementById("montoCompra").value=0;
-            }
-}
