@@ -12,9 +12,21 @@
     <!--Ejercicio 2-->
     <div id="formularioContainer" class="container">     
         <form id="formulario" onsubmit="return validarFormulario()" method="post" action="Cuota.php">
-            <center><h1>Simulador de Pago Mensual</h1></center>
+            <center><h1>Pago Mensual de Productos Data Mining</h1></center>
+
+            <label >Productos a la venta:</label>
+            <br>
+            <select id="ProductosDataMining" name="ProductosDataMining" onchange="CambiarSeleccion()">
+                <option value="">Seleccione...</option>
+                <option value="SO1">Sistema Operativo Microsoft Windows Server Datacenter 2022</option>
+                <option value="SO2">Sistema Operativo Windows 11 Pro 64-Bit Fqc-10572</option>
+                <option value="SO3">Sistema Microsoft Windows 10 Enterprise</option>
+            </select>
+            <br><br>
+
+
             <label for="montoCompra">Monto de la compra:</label>
-            <input type="number" step="0.01" id="montoCompra" name="montoCompra" ><br><br>
+            <input type="text" id="montoCompra" name="montoCompra" ><br><br>
 
             <label for="tipoTarjeta">Tipo de tarjeta:</label> <br>
             <select id="tipoTarjeta" name="tipoTarjeta" >
@@ -25,13 +37,13 @@
             </select><br><br>
 
             <label for="meses">Cantidad de meses:</label>
-            <input type="number" id="meses" name="meses" ><br><br>
+            <input type="text" id="meses" name="meses" ><br><br>
 
             <button type="submit">Calcular Cuota</button><br>
 
         </form>
         <br><br>
-    </div>
+    </div>    
 
     <!--Ejercicio 3-->  
     <form name="formCantidadNumeros" method="post" onsubmit="return validarCantidad()" action="NumerosAleatorios.php" novalidate>

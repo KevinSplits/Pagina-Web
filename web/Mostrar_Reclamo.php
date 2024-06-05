@@ -57,8 +57,8 @@
             echo "<p><strong>Email:</strong> $email</p>";
             echo "<p><strong>Nombre del padre:</strong> $padre</p>";
             echo "<p><strong>Detalle del reclamo:</strong> $detalle</p>";
-            echo "<p><strong>Acciones a tomar:</strong> $acciones</p>";
-            echo "<p><strong>Firma:</strong> $firma</p>";
+            echo "<p><strong>Recomendaciones:</strong> $acciones</p>";
+            echo "<p><strong>Código:</strong> $firma</p>";
             echo "</div>";
             echo "<a href='javascript:history.back()' class='regresar-btn'>Regresar</a>";
             } else {
