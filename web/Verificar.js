@@ -120,3 +120,20 @@ function validarNumeros() {
 
     return valid;
 }
+
+function CambiarSeleccion() {
+     var productos = document.getElementById("ProductosDataMining").value;
+     switch (productos) {
+                case "SO1":
+                    document.getElementById("montoCompra").value=129.9;
+                    break;
+                case "SO2":
+                    document.getElementById("montoCompra").value=99.9;
+                    break;
+                case "SO3":
+                    document.getElementById("montoCompra").value=249.9;
+                    break;
+                default:
+                    document.getElementById("montoCompra").value=0;
+            }
+}
