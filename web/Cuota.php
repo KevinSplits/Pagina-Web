@@ -9,38 +9,53 @@
 </head>
 <body>
     <div class="container">
-        <h1 style="text-align: center;">Resultado de Cuota Mensual</h1>
-        <div class="result">
-            <?php
-                if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                    $montoCompra = $_POST["montoCompra"];
-                    $tipoTarjeta = $_POST["tipoTarjeta"];
-                    $meses = $_POST["meses"];
+        <h1>Tabla de Amortización</h1>
+        <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $montoCompra = $_POST["montoCompra"];
+            $tipoTarjeta = $_POST["tipoTarjeta"];
+            $meses = $_POST["meses"];
+            $interes = 0;
+
+            switch ($tipoTarjeta) {
+                case "visa":
+                    $interes = 3;
+                    break;
+                case "mastercard":
+                    $interes = 3.5;
+                    break;
+                case "amex":
+                    $interes = 4;
+                    break;
+                default:
                     $interes = 0;
+            }
 
-                    switch ($tipoTarjeta) {
-                        case "visa":
-                            $interes = 3;
-                            break;
-                        case "mastercard":
-                            $interes = 3.5;
-                            break;
-                        case "amex":
-                            $interes = 4;
-                            break;
-                        default:
-                            $interes = 0;
-                    }
+            $i = $interes / 100;
+            $cuota = $montoCompra * $i / (1 - pow((1 + $i), -$meses));
 
-                    $i = $interes / 100;
-                    $cuota = $montoCompra * $i / (1 - pow((1 + $i), -$meses));
+            echo "<table>";
+            echo "<tr><th>Mes</th><th>Cuota mensual</th><th>Pago del interés</th><th>Pago del capital</th><th>Deuda</th></tr>";
 
-                    echo "La cuota mensual es: $" . number_format($cuota, 2);
-                }
-            ?>
-        </div>
-        <div style="text-align: center;">
-        <a href="EjerciciosPhp.html" class="button" style="text-align: center;">Regresar</a>
-        </div>
+            $deuda = $montoCompra;
+            for ($mes = 1; $mes <= $meses; $mes++) {
+                $pagoInteres = $deuda * $i;
+                $pagoCapital = $cuota - $pagoInteres;
+                $deuda -= $pagoCapital;
+
+                echo "<tr>";
+                echo "<td>$mes</td>";
+                echo "<td>" . number_format($cuota, 2) . "</td>";
+                echo "<td>" . number_format($pagoInteres, 2) . "</td>";
+                echo "<td>" . number_format($pagoCapital, 2) . "</td>";
+                echo "<td>" . number_format(max($deuda, 0), 2) . "</td>";
+                echo "</tr>";
+            }
+
+            echo "</table>";
+        }
+        ?>
+        <a href="EjerciciosPhp.html" class="button">Regresar</a>
+    </div>
 </body>
 </html>
