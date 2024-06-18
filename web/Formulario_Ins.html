@@ -7,254 +7,75 @@
 	<title></title>
 </head>
 <body>
-<body>
-    <div >     
-        <form >
+    <div>     
+        <form action="insertar.php" method="post">
             <center><h1>Formulario de Inscripción.</h1></center>
 
-            <label >Nombre de usuario:</label>
+            <label>Nombre de usuario:</label>
             <br>
-            <input type="text" name="name">
+            <input type="text" name="nombre" required>
             <br>
             <br>   
             <label for="fecha-nacimiento">Fecha de nacimiento:</label>
             <br>
-            <input type="date" name="nacimiento"><br>
+            <input type="date" name="nacimiento" required><br>
             <br>
             <label>Distrito:</label>
             <br>
-            <input list="Distrito" name="distrito"/></label>
-            <br>
+            <input list="Distrito" name="distrito" required/></label>
             <datalist id="Distrito">
-            	<option value="Lima">
-            <option value="Ancon">
-            <option value="Ate">
-            <option value="Barranco">
-            <option value="Breña">
-            <option value="Carabayllo">
-            <option value="Chaclacayo">
-            <option value="Chorrillos">
-            <option value="Cieneguilla">
-            <option value="Comas">
-            <option value="El Agustino">
-            <option value="Independencia">
-            <option value="Jesus Maria">
-            <option value="La Molina">
-            <option value="La Victoria">
-            <option value="Lince">
-            <option value="Los Olivos">
-            <option value="Lurigancho">
-            <option value="Lurin">
-            <option value="Magdalena Del Mar">
-            <option value="Magdalena Vieja">
-            <option value="Miraflores">
-            <option value="Pachacamac">
-            <option value="Pucusana">
-            <option value="Puente Piedra">
-            <option value="Punta Hermosa">
-            <option value="Punta Negra">
-            <option value="Rimac">
-            <option value="San Bartolo">
-            <option value="San Borja">
-            <option value="San Isidro">
-            <option value="San Juan De Lurigancho">
-            <option value="San Juan De Miraflores">
-            <option value="San Luis">
-            <option value="San Martin De Porres">
-            <option value="San Miguel">
-            <option value="Santa Anita">
-            <option value="Santa Maria Del Mar">
-            <option value="Santa Rosa">
-            <option value="Santiago De Surco">
-            <option value="Surquillo">
-            <option value="Villa El Salvador">
-            <option value="Villa Maria Del Triunfo">
-            <option value="Barranca">
-            <option value="Paramonga">
-            <option value="Pativilca">
-            <option value="Supe">
-            <option value="Supe Puerto">
-            <option value="Cajatambo">
-            <option value="Copa">
-            <option value="Gorgor">
-            <option value="Huancapon">
-            <option value="Manas">
-            <option value="Canta">
-            <option value="Arahuay">
-            <option value="Huamantanga">
-            <option value="Huaros">
-            <option value="Lachaqui">
-            <option value="San Buenaventura">
-            <option value="Santa Rosa De Quives">
-            <option value="San Vicente De Cañete">
-            <option value="Asia">
-            <option value="Calango">
-            <option value="Cerro Azul">
-            <option value="Chilca">
-            <option value="Coayllo">
-            <option value="Imperial">
-            <option value="Lunahuana">
-            <option value="Mala">
-            <option value="Nuevo Imperial">
-            <option value="Pacaran">
-            <option value="Quilmana">
-            <option value="San Antonio">
-            <option value="San Luis">
-            <option value="Santa Cruz De Flores">
-            <option value="Zuñiga">
-            <option value="Huaral">
-            <option value="Atavillos Alto">
-            <option value="Atavillos Bajo">
-            <option value="Aucallama">
-            <option value="Chancay">
-            <option value="Ihuari">
-            <option value="Lampian">
-            <option value="Pacaraos">
-            <option value="San Miguel De Acos">
-            <option value="Santa Cruz De Andamarca">
-            <option value="Sumbilca">
-            <option value="Veintisiete De Noviembre">
-            <option value="Matucana">
-            <option value="Antioquia">
-            <option value="Callahuanca">
-            <option value="Carampoma">
-            <option value="Chicla">
-            <option value="Cuenca">
-            <option value="Huachupampa">
-            <option value="Huanza">
-            <option value="Huarochiri">
-            <option value="Lahuaytambo">
-            <option value="Langa">
-            <option value="Laraos">
-            <option value="Mariatana">
-            <option value="Ricardo Palma">
-            <option value="San Andres De Tupicocha">
-            <option value="San Antonio">
-            <option value="San Bartolome">
-            <option value="San Damian">
-            <option value="San Juan De Iris">
-            <option value="San Juan De Tantaranche">
-            <option value="San Lorenzo De Quinti">
-            <option value="San Mateo">
-            <option value="San Mateo De Otao">
-            <option value="San Pedro De Casta">
-            <option value="San Pedro De Huancayre">
-            <option value="Sangallaya">
-            <option value="Santa Cruz De Cocachacra">
-            <option value="Santa Eulalia">
-            <option value="Santiago De Anchucaya">
-            <option value="Santiago De Tuna">
-            <option value="Santo Domingo De Los Ollero">
-            <option value="Surco">
-            <option value="Huacho">
-            <option value="Ambar">
-            <option value="Caleta De Carquin">
-            <option value="Checras">
-            <option value="Hualmay">
-            <option value="Huaura">
-            <option value="Leoncio Prado">
-            <option value="Paccho">
-            <option value="Santa Leonor">
-            <option value="Santa Maria">
-            <option value="Sayan">
-            <option value="Vegueta">
-            <option value="Oyon">
-            <option value="Andajes">
-            <option value="Caujul">
-            <option value="Cochamarca">
-            <option value="Navan">
-            <option value="Pachangara">
-            <option value="Yauyos">
-            <option value="Alis">
-            <option value="Ayauca">
-            <option value="Ayaviri">
-            <option value="Azangaro">
-            <option value="Cacra">
-            <option value="Carania">
-            <option value="Catahuasi">
-            <option value="Chocos">
-            <option value="Cochas">
-            <option value="Colonia">
-            <option value="Hongos">
-            <option value="Huampara">
-            <option value="Huancaya">
-            <option value="Huangascar">
-            <option value="Huantan">
-            <option value="Huañec">
-            <option value="Laraos">
-            <option value="Lincha">
-            <option value="Madean">
-            <option value="Miraflores">
-            <option value="Omas">
-            <option value="Putinza">
-            <option value="Quinches">
-            <option value="Quinocay">
-            <option value="San Joaquin">
-            <option value="San Pedro De Pilas">
-            <option value="Tanta">
-            <option value="Tauripampa">
-            <option value="Tomas">
-            <option value="Tupe">
-            <option value="Viñac">
-            <option value="Vitis">
+                <option value="Breña">
+                <option value="Lima">
+                <option value="Comas">
             </datalist>
             <br>
             <label>Contraseña:</label>
             <br>
-            <input type="password" name="password">
+            <input type="password" name="password" required>
             <br>
             <br>
             <label>Correo Electrónico:</label>
             <br>
-            <input type="email" name="correo">
+            <input type="email" name="correo" required>
             <br>
             <br>
             <label>Teléfono:</label>
             <br>
-            <input type="tel" name="telefono">
+            <input type="tel" name="telefono" required>
             <br>
             <br>
             
             <label>Género:</label>
             <br>
-            <input type="radio" name="genero" value="Hombre">Hombre
+            <input type="radio" name="genero" value="Hombre" required>Hombre
             <input type="radio" name="genero" value="Mujer">Mujer
             <input type="radio" name="genero" value="Otro">Otro
             <br>
             <br>
             <label>Tipo de usuario:</label>
             <br>
-            <select id="estadocivil" name="estadocivil" onchange="">
+            <select id="tipousuario" name="tipousuario" required>
+                <option value="">Selecciona tipo de usuario</option>
                 <option value="alumno">Alumno</option>
                 <option value="docente">Docente</option>
                 <option value="exalumno">Ex-alumno</option>
             </select>
             <br>
             <br>
-            <label>Areas de Especialización en Data mining:</label>
-            <input type="checkbox" name="especialidad" value="java">Programador Java <br>
-            <input type="checkbox" name="especialidad" value="c++">Programador C++ <br>
-            <input type="checkbox" name="especialidad" value="database">Analista de base de datos<br>
-            <input type="checkbox" name="especialidad" value="datamining">Dataminer Web<br>
-            <input type="checkbox" name="especialidad" value="ciberseguridad">Ciberseguridad<br>
+            <label>Áreas de Especialización en Data mining:</label>
+            <br>
+            <input type="checkbox" name="especialidad[]" value="java">Programador Java <br>
+            <input type="checkbox" name="especialidad[]" value="c++">Programador C++ <br>
+            <input type="checkbox" name="especialidad[]" value="database">Analista de base de datos<br>
+            <input type="checkbox" name="especialidad[]" value="datamining">Dataminer Web<br>
+            <input type="checkbox" name="especialidad[]" value="ciberseguridad">Ciberseguridad<br>
             <br>
             <label>Indica tu nivel de conocimiento:</label> <br>
-            <input type="range" name="conocimiento" min="0" max="100" value="90" step="10">
+            <input type="range" name="conocimiento" min="0" max="100" value="90" step="10" required>
             <br>
             <br>
             <input type="submit" value="Enviar">
             <input type="reset" value="Limpiar">
-
-
-
-
-
-
-
-
-
-
-
         </form>
         <br><br>
     </div>    
