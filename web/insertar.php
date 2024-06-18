@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+<?php
+	include ('conexion.php');
+	if(isset($_POST['nombre']) && !empty($_POST['nombre'])
+	 && isset($_POST['pass']) && !empty($_POST['pass'])){
+		$con = mysqli_connect($host,$user,$pass,$db) or die ("Problemas al conectar");
+		mysqli_query($con,"INSERT INTO codigo (nombre,pass) VALUES ('$_POST[nombre]','$_POST[pass]')");
+		echo "datos insertados";
+	} else {
+		echo "Problemas al insertar datos";
+	}
+?>
+=======
 <!DOCTYPE html>
 <html>
 <head>
@@ -82,3 +95,4 @@ if (
 ?>
 </body>
 </html>
+>>>>>>> 3bcd36b05976a649d5972f26c0b1065ef899d918
