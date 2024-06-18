@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="EstilosPhp.css">
+	<title></title>
+</head>
+<body>
+<body>
+    <div >     
+        <form >
+            <center><h1>Formulario de Inscripción.</h1></center>
+
+            <label >Nombre de usuario:</label>
+            <br>
+            <input type="text" name="name">
+            <br>
+            <br>   
+            <label for="fecha-nacimiento">Fecha de nacimiento:</label>
+            <br>
+            <input type="date" name="nacimiento"><br>
+            <br> 
+            <label>Contraseña:</label>
+            <br>
+            <input type="password" name="password">
+            <br>
+            <br>
+            <label>Correo Electrónico:</label>
+            <br>
+            <input type="email" name="correo">
+            <br>
+            <br>
+            <label>Teléfono:</label>
+            <br>
+            <input type="tel" name="telefono">
+            <br>
+            <br>
+            
+            <label>Género:</label>
+            <br>
+            <input type="radio" name="genero" value="Hombre">Hombre
+            <input type="radio" name="genero" value="Mujer">Mujer
+            <input type="radio" name="genero" value="Otro">Otro
+            <br>
+            <br>
+            <label>Tipo de usuario:</label>
+            <br>
+            <select id="estadocivil" name="estadocivil" onchange="">
+                <option value="alumno">Alumno</option>
+                <option value="docente">Docente</option>
+                <option value="exalumno">Ex-alumno</option>
+            </select>
+            <br>
+            <br>
+            <label>Areas de Especialización en Data mining:</label>
+            <input type="checkbox" name="especialidad" value="java">Programador Java <br>
+            <input type="checkbox" name="especialidad" value="c++">Programador C++ <br>
+            <input type="checkbox" name="especialidad" value="database">Analista de base de datos<br>
+            <input type="checkbox" name="especialidad" value="datamining">Dataminer Web<br>
+            <input type="checkbox" name="especialidad" value="ciberseguridad">Ciberseguridad<br>
+            <br>
+            <label>Indica tu nivel de conocimiento:</label> <br>
+            <input type="range" name="conocimiento" min="0" max="100" value="90" step="10">
+            <br>
+            <br>
+            <input type="submit" value="Enviar Reclamo">
+            <input type="reset" value="Limpiar">
+
+
+
+
+
+
+
+
+
+        </form>
+        <br><br>
+    </div>    
+</body>
+</html>
