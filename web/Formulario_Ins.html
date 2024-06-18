@@ -86,6 +86,12 @@
             <input type="text" name="nombre" id="nombre" /><br/><br/>
             <input type="submit" value="Borrar" /><br/><br/>
         </form>
+        <form id="searchForm" action="select.php" method="post" name="form">
+            <center><h1>Buscar Usuario</h1></center>
+            <input type="text" name="nombre" id="nombre" /><br/><br/>
+            <input type="submit" value="Buscar" /><br/><br/>
+        </form>
+
         <br><br>
            <form action="update.php" method="POST">
             <center><h1>Actualizar Usuario</h1></center>
@@ -160,7 +166,7 @@
             <input type="submit" value="Actualizar">
         </form>
         <br>
-        <form method="Crud.php">
+        <form action="Crud.php">
             <center><h1>Crear Tabla</h1></center>
             <input type="submit" value="Mostrar Tabla">
         </form>
