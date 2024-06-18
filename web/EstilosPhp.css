@@ -30,6 +30,21 @@ input[type="text"], input[type="email"], input[type="tel"],input[type="number"],
     padding: 8px;
     box-sizing: border-box;
 }
+input[type="password"]{
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+input[list="Distrito"]{
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+input[type="checkbox"]{
+    width:10%;
+
+
+}
 input[type="submit"] {
     background-color: #4CAF50;
     color: white;
