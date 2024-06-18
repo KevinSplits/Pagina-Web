@@ -73,7 +73,7 @@ if (
         echo "</div>";
     }
 
-    mysqli_close($con);
+    //mysqli_close($con);
 } else {
     echo "<div class='container'>";
     echo "<h1>Faltan campos por llenar en el formulario</h1>";

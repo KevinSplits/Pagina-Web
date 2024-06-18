@@ -1,15 +1,44 @@
-<?php
-	include ('conexion.php');
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="EstilosPhp.css">
+    <title>Búsqueda del usuario</title>
+</head>
+<body>
+    <div class="container">
+        <?php
+        include('conexion.php');
 
-	$con = mysqli_connect($host,$user,$pass,$db) or die ("Problemas al conectar al server");
-	mysqli_select_db($con,$db) or die ("Problemas al conectar a la base de datos");
+        if (isset($_POST['nombre']) && !empty($_POST['nombre'])) {
+            $nombre = $_POST['nombre'];
 
-	$registro = mysqli_query($con,"SELECT * FROM codigo where nombre='$_POST[nombre]' ") or die ("Problemas en consulta: ".mysqli_error());
+            $con = mysqli_connect($host, $user, $pass, $db) or die("Problemas al conectar");
 
-	if ($reg=mysqli_fetch_array($registro)) {
-		echo $reg['nombre']."<br>";
-		echo $reg['pass']."<br>";
-	}else{
-		echo "datos no encontrados";
-	}
-?>
+            $registro = mysqli_query($con, "SELECT * FROM usuario WHERE nom_usr = '$nombre'") or die("Problemas en consulta: " . mysqli_error($con));
+
+            if ($re = mysqli_fetch_array($registro)) {
+                echo "<h1>Información del Usuario</h1>";
+                echo "<p>Nombre: " . $re['nom_usr'] . "</p>";
+                echo "<p>Fecha de Nacimiento: " . $re['fec_usr'] . "</p>";
+                echo "<p>Correo: " . $re['cor_usr'] . "</p>";
+                echo "<p>Teléfono: " . $re['tel_usr'] . "</p>";
+                echo "<p>Género: " . $re['gen_usr'] . "</p>";
+                echo "<p>Tipo de Usuario: " . $re['tip_usr'] . "</p>";
+                echo "<p>Especialidades: " . $re['esp_usr'] . "</p>";
+                echo "<p>Nivel de Conocimiento: " . $re['niv_usr'] . "</p>";
+                echo "<p>Distrito: " . $re['cod_dis'] . "</p>";
+            } else {
+                echo "<h1>Usuario no encontrado</h1>";
+            }
+
+            //mysqli_close($con);
+        } else {
+            echo "<h1>Error al buscar datos. Por favor, proporciona el nombre de usuario.</h1>";
+        }
+        ?>
+        <a href="javascript:history.back()" class="regresar-btn">Regresar al Formulario</a>
+    </div>
+</body>
+</html>
