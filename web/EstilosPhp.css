@@ -65,6 +65,16 @@ input[type="reset"] {
 input[type="reset"]:hover {
     background-color: #45a049;
 }
+input[type="button"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+input[type="button"]:hover {
+    background-color: #45a049;
+}
 select:hover {
     background-color: darkgray;
 }

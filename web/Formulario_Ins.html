@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="EstilosPhp.css">
+    <script src="Verificar.js"></script>
 	<title></title>
 </head>
 <body>
@@ -76,8 +77,13 @@
             <br>
             <input type="submit" value="Enviar">
             <input type="reset" value="Limpiar">
+            <!--<button type="submit" formaction="delete.php" formmethod="post">Borrar</button>-->
         </form>
         <br><br>
-    </div>    
-</body>
+        <form id="deleteForm" action="delete.php" method="post" name="form" onsubmit="return confirmarBorrado()">
+            <p>Borrar usuario</p>
+            <input type="text" name="nombre" id="nombre" /><br/><br/>
+            <input type="submit" value="Borrar" /><br/><br/>
+        </form>
+    </body>
 </html>

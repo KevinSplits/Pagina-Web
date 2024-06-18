@@ -138,4 +138,15 @@ function validarNumeros() {
 
     return valid;
 }
+//ENTREGABLE 5
 
+//Verificar borrado de usuario
+
+function confirmarBorrado() {
+    var nombreUsuario = document.getElementById("nombre").value;
+    if (confirm("¿Estás seguro de borrar al usuario " + nombreUsuario + "?")) {
+        return true;
+    } else{
+        return false;
+    }
+}
