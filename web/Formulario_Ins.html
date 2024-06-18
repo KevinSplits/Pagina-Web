@@ -10,7 +10,8 @@
 <body>
     <div>     
         <form action="insertar.php" method="post">
-            <center><h1>Formulario de Inscripción.</h1></center>
+            
+            <center><h1>Agregar Usuario</h1></center>
 
             <label>Nombre de usuario:</label>
             <br>
@@ -29,7 +30,7 @@
                 <option value="Lima">
                 <option value="Comas">
             </datalist>
-            <br>
+            <br><br>
             <label>Contraseña:</label>
             <br>
             <input type="password" name="password" required>
@@ -81,9 +82,87 @@
         </form>
         <br><br>
         <form id="deleteForm" action="delete.php" method="post" name="form" onsubmit="return confirmarBorrado()">
-            <p>Borrar usuario</p>
+            <center><h1>Borrar Usuario</h1></center>
             <input type="text" name="nombre" id="nombre" /><br/><br/>
             <input type="submit" value="Borrar" /><br/><br/>
+        </form>
+        <br><br>
+           <form action="update.php" method="POST">
+            <center><h1>Actualizar Usuario</h1></center>
+            <label for="cod_usuario">Código de Usuario:</label>
+            <input type="text" id="cod_usuario" name="cod_usuario" required><br><br>
+            <label>Nombre de usuario:</label>
+            <br>
+            <input type="text" name="nombre" required>
+            <br>
+            <br>   
+            <label for="fecha-nacimiento">Fecha de nacimiento:</label>
+            <br>
+            <input type="date" name="nacimiento" required><br>
+            <br>
+            <label>Distrito:</label>
+            <br>
+            <input list="Distrito" name="distrito" required/></label>
+            <datalist id="Distrito">
+                <option value="Breña">
+                <option value="Lima">
+                <option value="Comas">
+            </datalist>
+            <br><br>
+            <label>Contraseña:</label>
+            <br>
+            <input type="password" name="password" required>
+            <br>
+            <br>
+            <label>Correo Electrónico:</label>
+            <br>
+            <input type="email" name="correo" required>
+            <br>
+            <br>
+            <label>Teléfono:</label>
+            <br>
+            <input type="tel" name="telefono" required>
+            <br>
+            <br>
+            
+            <label>Género:</label>
+            <br>
+            <input type="radio" name="genero" value="Hombre" required>Hombre
+            <input type="radio" name="genero" value="Mujer">Mujer
+            <input type="radio" name="genero" value="Otro">Otro
+            <br>
+            <br>
+            <label>Tipo de usuario:</label>
+            <br>
+            <select id="tipousuario" name="tipousuario" required>
+                <option value="">Selecciona tipo de usuario</option>
+                <option value="alumno">Alumno</option>
+                <option value="docente">Docente</option>
+                <option value="exalumno">Ex-alumno</option>
+            </select>
+            <br>
+            <br>
+            <label>Áreas de Especialización en Data mining:</label>
+            <br>
+            <input type="checkbox" name="especialidad[]" value="java">Programador Java <br>
+            <input type="checkbox" name="especialidad[]" value="c++">Programador C++ <br>
+            <input type="checkbox" name="especialidad[]" value="database">Analista de base de datos<br>
+            <input type="checkbox" name="especialidad[]" value="datamining">Dataminer Web<br>
+            <input type="checkbox" name="especialidad[]" value="ciberseguridad">Ciberseguridad<br>
+            <br>
+            <label>Indica tu nivel de conocimiento:</label> <br>
+            <input type="range" name="conocimiento" min="0" max="100" value="90" step="10" required>
+            <br>
+            <br>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpiar">
+
+            <input type="submit" value="Actualizar">
+        </form>
+        <br>
+        <form method="Crud.php">
+            <center><h1>Actualizar Tabla</h1></center>
+            <input type="submit" value="Mostrar Tabla">
         </form>
     </body>
 </html>
