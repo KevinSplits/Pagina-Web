@@ -73,12 +73,23 @@
             <input type="checkbox" name="especialidad[]" value="ciberseguridad">Ciberseguridad<br>
             <br>
             <label>Indica tu nivel de conocimiento:</label> <br>
-            <input type="range" name="conocimiento" min="0" max="100" value="90" step="10" required>
+            <input type="range" name="conocimiento" min="0" max="10" value="9" step="1" required>
             <br>
             <br>
             <input type="submit" value="Enviar">
             <input type="reset" value="Limpiar">
             <!--<button type="submit" formaction="delete.php" formmethod="post">Borrar</button>-->
+        </form>
+        <br><br>
+        <form id="mostrarForm" action="CRUD.php" method="post" name="form">
+            <p>Mostrar Usuarios</p>
+            <input type="submit" value="Mostrar" /><br/><br/>
+        </form>
+    <br><br>
+        <form id="searchForm" action="select.php" method="post" name="form">
+            <p>Buscar usuario</p>
+            <input type="text" name="nombre" id="nombre" /><br/><br/>
+            <input type="submit" value="Buscar" /><br/><br/>
         </form>
         <br><br>
         <form id="deleteForm" action="delete.php" method="post" name="form" onsubmit="return confirmarBorrado()">
