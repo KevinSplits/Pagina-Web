@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="EstilosPhp.css">
+    <title></title>
+</head>
+<body>
 <?php
 include('conexion.php');
 
@@ -51,13 +60,25 @@ if (
                              VALUES ('$nombre', '$fecha_nacimiento', '$password', '$correo', '$telefono', '$genero', '$tipo_usuario', '$especialidades', '$conocimiento', '$cod_dis')";
 
     if (mysqli_query($con, $query_insert_usuario)) {
-        echo "Datos insertados correctamente";
+        echo "<div class='container'>";
+        echo "<h1>Datos insertados correctamente</h1>";
+        echo "<a href='javascript:history.back()' class='regresar-btn'>Regresar al Formulario</a>";
+        echo "</div>";
     } else {
-        echo "Error al insertar usuario: " . mysqli_error($con);
+        echo "<div class='container'>";
+        echo "<h1>Error al insertar usuario</h1>";
+        echo "<p>" . mysqli_error($con) . "</p>";
+        echo "<a href='javascript:history.back()' class='regresar-btn'>Regresar al Formulario</a>";
+        echo "</div>";
     }
 
     mysqli_close($con);
 } else {
-    echo "Faltan campos por llenar en el formulario";
+    echo "<div class='container'>";
+    echo "<h1>Faltan campos por llenar en el formulario</h1>";
+    echo "<a href='javascript:history.back()' class='regresar-btn'>Regresar al Formulario</a>";
+    echo "</div>";
 }
 ?>
+</body>
+</html>
