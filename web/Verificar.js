@@ -150,3 +150,12 @@ function confirmarBorrado() {
         return false;
     }
 }
+
+
+function actualizarValor(valor) {
+        document.getElementById('valor').textContent = valor;
+    }
+
+function actualizarValor2(valor2) {
+        document.getElementById('valor2').textContent = valor2;
+    }

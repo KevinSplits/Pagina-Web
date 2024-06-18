@@ -16,7 +16,9 @@
 
             $con = mysqli_connect($host, $user, $pass, $db) or die("Problemas al conectar");
 
-            $registro = mysqli_query($con, "SELECT * FROM usuario WHERE nom_usr = '$nombre'") or die("Problemas en consulta: " . mysqli_error($con));
+            $registro = mysqli_query($con, "SELECT u.cod_usr, u.nom_usr, u.fec_usr, u.con_usr, u.cor_usr, u.tel_usr, u.gen_usr, u.tip_usr, u.esp_usr, u.niv_usr, d.nom_dis
+                      FROM usuario u
+                      INNER JOIN distrito d ON u.cod_dis = d.cod_dis WHERE nom_usr = '$nombre'") or die("Problemas en consulta: " . mysqli_error($con));
 
             if ($re = mysqli_fetch_array($registro)) {
                 echo "<h1>Información del Usuario</h1>";
@@ -28,7 +30,7 @@
                 echo "<p>Tipo de Usuario: " . $re['tip_usr'] . "</p>";
                 echo "<p>Especialidades: " . $re['esp_usr'] . "</p>";
                 echo "<p>Nivel de Conocimiento: " . $re['niv_usr'] . "</p>";
-                echo "<p>Distrito: " . $re['cod_dis'] . "</p>";
+                echo "<p>Distrito: " . $re['nom_dis'] . "</p>";
             } else {
                 echo "<h1>Usuario no encontrado</h1>";
             }
