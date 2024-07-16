@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="EstilosContacto.css">
+    <script type="text/javascript" src="FuncionesContacto.js"></script>
 	<title>Formulario de Contacto</title>
 </head>
 <body class="contact-body">
@@ -11,25 +12,35 @@
         <h1 class="form-title">Contactos</h1>
         <p class="form-description">Para cualquier sugerencia o consulta, por favor envíelo mediante este formulario.</p>
         <form action="https://formsubmit.co/panlox123@gmail.com" method="POST" class="contact-form">
-            <label for="name" class="form-label">Nombre:</label>
-            <input type="text" id="name" name="name" placeholder="Nombre" required class="form-input"><br><br>
-
-            <label for="email" class="form-label">Correo Electrónico:</label>
-            <input type="email" id="email" name="email" placeholder="Destinatario" required class="form-input"><br><br>
-
-            <label for="phone" class="form-label">Teléfono:</label>
-            <input type="tel" id="phone" name="phone" placeholder="Teléfono" class="form-input"><br><br>
-
-            <label for="subject" class="form-label">Asunto:</label>
-            <input type="text" id="subject" name="subject" placeholder="Motivo" class="form-input"><br><br>
-
-            <label for="comments" class="form-label">Comentarios:</label>
-            <textarea id="comments" name="comments" placeholder="Comentario" required class="form-textarea"></textarea><br><br>
-
-            <label for="address" class="form-label">Dirección:</label>
-            <input type="text" id="address" name="address" placeholder="Dirección" class="form-input"><br><br>
-
-            <input type="submit" value="Enviar" class="form-submit">
+            <div class="form-row">
+                <label for="name" class="form-label">Nombre:</label>
+                <input type="text" id="name" name="name" placeholder="Nombre" required class="form-input">
+            </div>
+            <div class="form-row">
+                <label for="email" class="form-label">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="Destinatario" required class="form-input">
+            </div>
+            <div class="form-row">
+                <label for="phone" class="form-label">Teléfono:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Teléfono" class="form-input">
+            </div>
+            <div class="form-row">
+                <label for="subject" class="form-label">Asunto:</label>
+                <input type="text" id="subject" name="subject" placeholder="Asunto" class="form-input">
+            </div>
+            <div class="form-row">
+                <label for="comments" class="form-label">Comentarios:</label>
+                <textarea id="comments" name="comments" placeholder="Comentario" required class="form-textarea"></textarea>
+            </div>
+            <div class="form-row">
+                <label for="address" class="form-label">Dirección:</label>
+                <input type="text" id="address" name="address" placeholder="Dirección" class="form-input">
+            </div>
+            <div class="form-row">
+                <input type="submit" value="Enviar" class="form-submit">
+                <button type="button" onsubmit="clearForm()" class="form-clear">Limpiar</button>
+                <button type="button" onsubmit="cancelForm()" class="form-cancel">Cancelar</button>
+            </div>
         </form>
     </div>
 </body>
