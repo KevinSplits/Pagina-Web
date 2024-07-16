@@ -1,6 +1,7 @@
 //let currentIndex = -1; // Variable global para rastrear el índice del campo actual
 
-function clearForm() {
+function limpiarFormularioContacto() {
+    //Opción 1: Limpiar los campos (uno a uno) desde el primer hasta el último campo (con cuadros de diálogo por campo) con solo apretar el botón una vez
     /*const inputs = document.querySelectorAll('.form-input, .form-textarea');
 
     // Incrementar el índice para pasar al siguiente campo
@@ -28,7 +29,7 @@ function clearForm() {
         // Reiniciar currentIndex cuando se alcanza el final de los campos
         currentIndex = -1;
     }*/
-    // Opción 2: Limpiar desde el último input ingresado hasta el primero
+    // Opción 2: Limpiar desde el último input ingresado hasta el primero (sin cuadros de diálogo) presionando el botón varias veces
     const inputs = document.querySelectorAll('.form-input, .form-textarea');
     for (let i = inputs.length - 1; i >= 0; i--) {
         if (inputs[i].value !== '') {
@@ -38,7 +39,7 @@ function clearForm() {
     }
 }
 
-function cancelForm() {
+function cancelarFormularioContacto() {
     if (confirm('¿Desea cancelar el envío total? Se perderán todos los cambios realizados')) {
         document.querySelector('.contact-form').reset();
     }
