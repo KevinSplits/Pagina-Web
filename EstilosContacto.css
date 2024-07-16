@@ -86,3 +86,10 @@
 .form-cancel:hover {
     background-color: #E53935;
 }
+
+.error-message {
+    font-size: 0.8em; /* Tamaño de letra más pequeño */
+    color: darkred; /* Color rojo oscuro */
+    margin-top: 5px; /* Espacio arriba */
+    margin-left: 122px;
+}
