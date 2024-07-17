@@ -70,9 +70,7 @@ function logout() {
 
 		<li><button class="boton1"><a href="LibroReclamos.html" class="vinculo"target="right">Libro de reclamaciones</button></a></li><br>
 
-		<li><button class="boton1"><a href="InicioSesion.php" class="vinculo" target="right">Inicio Sesión</button></a></li><br>
-
-		<li><button class="boton1"><a href="Formulario_Contacto.html" class="vinculo" target="right">Formulario de Contacto</button></a></li><br>
+		<li><button class="boton1"><a href="Formulario_Contacto.html" class="vinculo" target="right">Formulario de Contacto</button></a></li>
 
 	</ul>
 	
