@@ -1,3 +1,28 @@
+	 
+	 <?php
+
+	 include('config.php');
+    echo '<center><div class="panel-heading">Bienvenido Usuario</div><div class="panel-body">';
+    echo '<img src="'.$_SESSION["user_image"].'" class="img-responsive img-circle img-thumbnail" />';
+    echo '<h3><b>Email :</b> '.$_SESSION['user_email_address'].'</h3>';
+    echo '<h3><a href="#" onclick="logout()">Cerrar Sesión</a></h3></div></center>';
+
+   ?>
+   <script>
+function logout() {
+    // Hacer una solicitud para destruir la sesión
+    fetch('logout.php')
+    .then(response => {
+        if (response.ok) {
+            // Redirigir la página principal a index.php
+            window.parent.location.href = 'index.php';
+        } else {
+            console.error('Error al cerrar sesión');
+        }
+    })
+    .catch(error => console.error('Error de red:', error));
+}
+</script>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,6 +30,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="Estilos.css">
+    <style type="text/css"></style>
 </head>
 <body id="lista">
 	<ul>
