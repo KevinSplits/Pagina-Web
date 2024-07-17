@@ -50,6 +50,21 @@
             background-color: #c9302c;
         }
 
+         .login-container input[type="button"] {
+            background-color: #d9534f;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 12px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .login-container input[type="button"]:hover {
+            background-color: #c9302c;
+        }
+
+
         .login-container .link {
             display: block;
             margin-top: 15px;

@@ -1,13 +1,24 @@
 	 
 	 <?php
-
-	 include('config.php');
-    echo '<center><div class="panel-heading">Bienvenido Usuario</div><div class="panel-body">';
+     include('config.php');
+   if (isset($_SESSION['access_token'])) {
+   
+   echo '<center><div class="panel-heading">Bienvenido Usuario</div><div class="panel-body">';
     echo '<img src="'.$_SESSION["user_image"].'" class="img-responsive img-circle img-thumbnail" />';
     echo '<h3><b>Email :</b> '.$_SESSION['user_email_address'].'</h3>';
     echo '<h3><a href="#" onclick="logout()">Cerrar Sesión</a></h3></div></center>';
 
-   ?>
+} else {
+     echo '<br>';
+    // Verifica si 'usuario' está definido en la sesión
+    if (isset($_SESSION['usuario'])) {
+        echo '<center><h3>Bienvenido, ' . htmlspecialchars($_SESSION['usuario']) . '!</h3>';
+    } else {
+        echo '<center><h3>Bienvenido, Usuario!</h3>';  // Mensaje por defecto si 'usuario' no está definido
+    }
+    echo '<h3><a href="#" onclick="logout()">Cerrar Sesión</a></h3></div></center>';
+}
+?>
    <script>
 function logout() {
     // Hacer una solicitud para destruir la sesión

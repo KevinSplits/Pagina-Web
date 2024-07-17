@@ -10,10 +10,6 @@
 </head>
 <body>
     <div class="login-container">
-        <a href="logout.php">Cerrar Sesión</a><br>
-        <?php if (isset($_SESSION['usuario'])) {
-            echo '<p>Bienvenido, ' . htmlspecialchars($_SESSION['usuario']) . '!</p>';
-        } ?>
         <form action="" method="POST">
             <img src="imagen/logo.png" alt="Logo">
             <label for="user">Usuario:</label>
@@ -21,7 +17,11 @@
             <label for="pass">Contraseña:</label>
             <input type="password" id="pass" name="pass" required><br>
             <div class="g-recaptcha" data-sitekey="6LdrERAqAAAAAFrnQTXXdkzzojiHIJuEZTDkHzMi"></div>
+            <br>
             <input type="submit" name="enviar" value="Iniciar sesión">
+            <br>
+            <br>
+            <a href="index.php">Volver</a>
         </form>
     </div>
     <?php
@@ -53,10 +53,10 @@
         
         if ($response_keys['success']) {
             // CAPTCHA validado
-            if ($user == "web" && $pass == "123") {
+            if ($user == "Admin" && $pass == "123") {
                 $_SESSION['session'] = true;
                 $_SESSION['usuario'] = $user;
-                echo '<script>alert("Has iniciado la sesión."); window.location.href = "InicioSesion.php";</script>';
+                echo '<script>alert("Has iniciado la sesión."); window.location.href = "FrameMenu.html";</script>';
             } else {
                 echo '<script>alert("Error de usuario o clave incorrecta.");</script>';
             }
