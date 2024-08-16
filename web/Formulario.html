@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="Estilos.css">
+	<title></title>
+</head>
+<body class="FondoBodyForm">
+	<div class="formulario">
+	<form>
+		<fieldset>
+			<legend>Formulario de suscripción</legend>
+			<label>Nombre: </label>
+			<input type="text" name="nombre"><br><br>
+			<label>Apellidos: </label>
+			<input type="text" name="apellidos"><br><br>
+			<label>Email: </label>
+			<input type="text" name="correo"><br><br>
+			<label>Género:</label>
+			<select name="gen">
+				<option>Maculino</option>
+				<option>Femenino</option>
+			</select> <br><br>
+			<label class="Pref">Preferencias temáticas: </label> <br><br>
+			 <input type="checkbox" id="Preferencias1" name="new" checked />Noticias y tendencias sobre Minería de Datos<br>
+			 <input type="checkbox" id="Preferencias2" name="tec" checked />Técnicas y métodos para Minería de Datos<br>
+			 <input type="checkbox" id="Preferencias3" name="tool" checked />Herramientas tecnológicas relacionadas con Minería de Datos <br>
+			 <input type="checkbox" id="Preferencias4" name="rec" checked />Recursos y talleres sobre Minería de Datos<br><br>
+			<label>Sugerencias</label><br><br>
+			<textarea rows="5" cols="30"></textarea>
+			<br><br>
+			<input type="submit" name="enviar" value="Enviar">
+			<input type="reset" name="borrar" value="Borrar">
+			<button>Guardar</button>
+			<button>Cancelar</button>		
+		</fieldset>
+		
+	</form>
+	</div>
+</body>
+</html>

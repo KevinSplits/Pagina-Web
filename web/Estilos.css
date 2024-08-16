@@ -1,0 +1,199 @@
+/*Selector universal para el modelo de caja*/
+*{
+	box-sizing: border-box;
+}
+
+
+/*Selectores generales de las etiquetaa*/
+body{
+	background-color: #0000;
+}
+
+header{
+	background-color: #eef5d3   ;
+	padding: 20px;
+	font-size: 25px;
+	color: #333333;
+}
+
+section{background-color: #f5d3d8   ;
+	padding: 20px;
+	font-size: 25px;
+	color: #333333;
+}
+
+footer{
+	padding: 20px;
+	font-size: 25px;
+	background-color: #d3f5da ;
+	color: #333333;
+
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+   background-color: #f2f2f2;
+}
+
+ul{
+	list-style:none;
+	float: left;
+}
+
+ul li{
+	list-style-type: none;
+	padding-top: 20px;
+}
+
+@media(max-width: 600px){
+	section, footer{
+		width: 100%;
+		height: auto;
+	}
+}
+
+img{
+	width: 15%;
+	height: 15%;
+}
+
+
+/*Barra de Título*/
+#titulo{
+	background-image:url(imagen/enc1.png);
+	background-repeat: no repeat;
+	background-size: cover;
+	font-family:monospace;
+	font-size: 20px;
+}
+
+
+/*Contenido en Inicio*/
+#body1{ /*ID body1*/
+	background-image:url(imagen/Contactos.png);
+	font-family: Times;
+	margin: 2cm;
+	background-color: #736a70
+}
+
+.viñetas1{ /*Clase viñetas1*/
+	list-style: square;
+}
+
+.viñetas2{ /*Clase viñetas2*/
+	list-style: circle;
+}
+
+
+/*Barra de Contactos*/
+#copy{/*ID para el cuerpo de la página "Contactos"*/
+	background-image:url(imagen/fondoazuloscuro.png);
+	background-repeat: no repeat;
+	background-size: cover;
+	font-family:monospace;
+	font-size: 15px;
+	color:white;
+}
+.datos{ /*Clase "datos" para la tabla de Contactos*/
+	width: 100%;
+    border-collapse: collapse;
+}
+.columna1{ /*Clase "columna1" para la celda*/
+	width: 40%;
+}
+.columna2, .columna3{ /*Clase "columna2" para la celda*/
+	width: 30%;
+}
+
+
+/*Barra Indice o Lista*/
+#lista{ /*ID lista*/
+	background-image:url(imagen/Lista.jpg);
+	float: center;
+	font-family:cursive;
+	font-size: 20px;
+}
+.boton1{ /*Clase "boton1"*/
+	background-color: #393982;
+}
+.vinculo{ /*Clase "vinculo"*/
+	color: #A6CBCA;
+}
+a:hover{ /*Selector para los hipervínculos cuando pasa el cursor por encima*/
+    color:#FF0000; 
+}
+
+
+/*Contenido: Características (Tabla)*/
+#fondotabla{ /*ID del fondo para la página "Tabla"*/
+	background-image:url(imagen/fondo2.jpeg);
+	color:white;
+}
+.tabla table { /*Clase "tabla" para el cuerpo de la página "Tabla"*/
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+#bodytabla{ /*ID para la tabla de "Características"*/
+	background-color: #eef5d3;
+	padding: 20px;
+	font-size: 25px;
+	color: #333333;
+}
+
+
+/*Formulario*/
+.FondoBodyForm{ /*Clase para el fondo de la página "Formulario"*/
+	background-image: url(imagen/form1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.formulario{ /*Clase para el formulario en sí*/
+	padding: 30px;
+}
+/*Un selector para elementos "input" de atributo "text" y "checkbox"*/
+input [type="text"]{ 
+	margin: 0 0 1em 0;
+	border: 10px solid #000;
+	padding: 100px;
+	width: 100%;
+}
+input[type="checkbox"] {
+    color: white; 
+}
+/*Selector específico para las siguientes etiquetas*/
+fieldset{
+	border-color: #000;
+	background-color: #34394F;
+	padding: 15px;
+	margin: 0 auto;
+	max-width: 500px;
+	text-align: left;
+	width: 41%;
+	height: 50%;
+	color: white;
+}
+legend{
+	border: 2px solid black;
+	color: white;
+	text-align: center;
+	background-color: #34394F;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+label{
+	color: white;
+}
+
+
+/*Contenido audivisual (Videos)*/
+#video{
+	background-image:url(imagen/fondo.png);
+	color:white;
+	font-size:20px;
+}
+
+
