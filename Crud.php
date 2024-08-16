@@ -8,6 +8,7 @@
     <title>Tabla de Datos Guardados</title>
 </head>
 <body>
+    <form></form>
     <?php
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // Incluir archivo de conexión a la base de datos
